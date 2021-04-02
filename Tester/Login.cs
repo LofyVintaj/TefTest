@@ -46,12 +46,8 @@ namespace Tester
             } 
             label2.Text = line1;
             label3.Text = line2;
-            //while (line != null) {
-            //    label2.Text = line;
-            //    line = fileI.ReadLine();
-            //}
 
-            fileI.Close();
+            fileI.Close();  
             this.Hide();
         }
 
