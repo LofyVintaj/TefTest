@@ -1,0 +1,77 @@
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe.config
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.pdb
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Form1.resources
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.cache
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.exe
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.pdb
+D:\500\КПиЯП\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Login.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe.config
+H:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe
+H:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.pdb
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Form1.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Login.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.cache
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.exe
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.pdb
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe.config
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.exe
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.pdb
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.pdb
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\mscorlib.dll
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\System.Net.Http.dll
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\System.Net.Http.xml
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\ru\System.Net.Http.resources.dll
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\normidna.nlp
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\normnfc.nlp
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\normnfd.nlp
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\normnfkc.nlp
+E:\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\normnfkd.nlp
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Form1.resources
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Login.resources
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Admin.resources
+E:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.LoginError.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Admin.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.LoginError.resources
+H:\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.UserLogin.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe.config
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.exe
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\bin\Debug\Tester.pdb
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Admin.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Form1.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.FormCreatTest.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Login.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.LoginError.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.UserLogin.resources
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.cache
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.exe
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.pdb
+D:\college\Научная\Tester\Сенкевич С.О\project\Tester\Tester\obj\Debug\Tester.CustomizeQuestion.resources
+D:\college\Научная\Tester\Tester\Tester\bin\Debug\Tester.exe.config
+D:\college\Научная\Tester\Tester\Tester\bin\Debug\Tester.exe
+D:\college\Научная\Tester\Tester\Tester\bin\Debug\Tester.pdb
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Admin.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.CustomizeQuestion.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Form1.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.FormCreatTest.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Login.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.LoginError.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.UserLogin.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.cache
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.exe
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.pdb
