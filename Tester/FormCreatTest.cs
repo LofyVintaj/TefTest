@@ -47,8 +47,9 @@ namespace Tester
                 object_questions[i].count_question = count_question;
                 object_questions[0].Show();
             }
+            this.Hide();
 
-            
+
         }
 	}
 }

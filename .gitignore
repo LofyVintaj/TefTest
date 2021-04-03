@@ -1,6 +1,14 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore
-# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore
+# Created by https://www.toptal.com/developers/gitignore/api/database,dotnetcore
+# Edit at https://www.toptal.com/developers/gitignore?templates=database,dotnetcore
+
+### Database ###
+*.accdb
+*.db
+*.dbf
+*.mdb
+*.pdb
+*.sqlite3
 
 ### DotnetCore ###
 # .NET Core build folders
@@ -11,4 +19,4 @@ obj/
 /node_modules
 /wwwroot/node_modules
 
-# End of https://www.toptal.com/developers/gitignore/api/dotnetcore
+# End of https://www.toptal.com/developers/gitignore/api/database,dotnetcore

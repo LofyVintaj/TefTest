@@ -32,14 +32,20 @@ namespace Tester
 			if (radioButton1.Checked)
 			{
 				MessageBox.Show(radioButton1.Text);
+				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
+				frm.Show();
 			}
 			if (radioButton2.Checked)
 			{
 				MessageBox.Show(radioButton2.Text);
+				CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
+				frm.Show();
 			}
 			if (radioButton3.Checked)
 			{
 				MessageBox.Show(radioButton3.Text);
+				CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
+				frm.Show();
 			}
 		}
 
