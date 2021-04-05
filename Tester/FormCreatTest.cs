@@ -51,6 +51,17 @@ namespace Tester
                object_questions[0].Show();
             }
 
+            string connectionString = "TestBook";
+            //MongoClient client = new MongoClient(connectionString);
+            //IMongoDatabase database = client.GetDatabase("tester");
+            MongoCRUD db = new MongoCRUD(connectionString);
+            //db.InsertRecord("User", < Object >);
+            db.InsertRecord("Test", new Test
+            {
+                name = test_name,
+                count_question = count_question
+            });
+
             object_questions[count_question - 1].test_name = test_name;
 
             this.Hide();

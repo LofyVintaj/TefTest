@@ -71,12 +71,32 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-
 			object_questions[page + 1].Show();
-
 			object_questions[page].Hide();
 
-
+			if (radioButton1.Checked)
+			{
+				MessageBox.Show(radioButton1.Text);
+				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
+				QuestionChoiseAnser object_question = new QuestionChoiseAnser();
+				//object_questions.Add(object_question);
+				frm.Show();
+			}
+			if (radioButton2.Checked)
+			{
+				MessageBox.Show(radioButton2.Text);
+				CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
+				//object_questions.Add(object_question);
+				frm.Show();
+			}
+			if (radioButton3.Checked)
+			{
+				MessageBox.Show(radioButton3.Text);
+				CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
+				QuestionInsertWordQuestion object_question = new QuestionInsertWordQuestion();
+				//object_questions.Add(object_question);
+				frm.Show();
+			}
 
 		}
 
@@ -92,15 +112,14 @@ namespace Tester
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			string connectionString = "TestBook";
-			//MongoClient client = new MongoClient(connectionString);
-			//IMongoDatabase database = client.GetDatabase("tester");
-			MongoCRUD db = new MongoCRUD(connectionString);
-			//db.InsertRecord("User", < Object >);
-			db.InsertRecord("Test", new Test { 
-				name = test_name, 
-				count_question = count_question 
-			});
+			this.Hide();
+			Form1 first_form = new Form1();
+			first_form.Show();
+		}
+
+		private void radioButton1_CheckedChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

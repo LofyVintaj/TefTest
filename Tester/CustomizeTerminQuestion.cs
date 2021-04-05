@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace Tester
 {
+
 	public partial class CustomizeTerminQuestion : Form
 	{
+		QuestionTermin object_question = new QuestionTermin();
+
 		public CustomizeTerminQuestion()
 		{
 			InitializeComponent();
@@ -24,8 +27,13 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			String termin_body = richTextBox1.Text;
-			String termin_value = textBox1.Text;
+			string connectionString = "TestBook";
+			MongoCRUD db = new MongoCRUD(connectionString);
+			
+
+			object_question.termin_text = richTextBox1.Text;
+			object_question.termin_value = textBox1.Text;
+
 			this.Hide();
 		}
 

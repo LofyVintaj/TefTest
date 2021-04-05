@@ -58,6 +58,7 @@ namespace Tester
 			this.radioButton1.TabStop = true;
 			this.radioButton1.Text = "Выбор ответа";
 			this.radioButton1.UseVisualStyleBackColor = true;
+			this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
 			// 
 			// radioButton2
 			// 
@@ -114,7 +115,7 @@ namespace Tester
 			// 
 			// button5
 			// 
-			this.button5.Location = new System.Drawing.Point(713, 187);
+			this.button5.Location = new System.Drawing.Point(632, 415);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(75, 23);
 			this.button5.TabIndex = 8;

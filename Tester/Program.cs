@@ -58,12 +58,11 @@ namespace Tester
     public class QuestionChoiseAnser
     {
         public List<RadioDataQuestion> object_questions = new List<RadioDataQuestion>();
-
     }
     public class QuestionTermin
     {
         public String termin_text { get; set; }
-        public String termin_right_value { get; set; }
+        public String termin_value { get; set; }
         public int appraisal { get; set; }
     }
     public class QuestionInsertWordQuestion
