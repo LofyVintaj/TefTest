@@ -13,6 +13,43 @@ namespace Tester
 {
     public partial class FormCreatTest : Form
     {
+        // ChoiseRadio
+
+        public class RadioDataQuestion
+        {
+            // Объект теста
+            public String name { get; set; }
+            public bool or_right { get; set; }
+        }
+
+
+        public class Test
+        {
+            // Объект теста
+            public String name { get; set; }
+            public int count_question
+            {
+                get; set;
+            }
+        }
+
+            // Объекты вопросов
+        public class QuestionChoiseAnser
+        {
+            public List<RadioDataQuestion> object_questions = new List<RadioDataQuestion>();
+
+        }
+        public class QuestionTermin
+        {
+            public String termin_text { get; set; }
+            public String termin_right_value { get; set; }
+            public int appraisal { get; set; }
+        }
+        public class QuestionInsertWordQuestion
+        {
+            public String text { get; set; }
+        }
+
         public FormCreatTest()
         {
             InitializeComponent();
@@ -20,6 +57,8 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+            
+
             int count_question;
             if (textBox1.Text == "0")
 			{
@@ -49,7 +88,12 @@ namespace Tester
             }
             this.Hide();
 
-
+        
         }
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
