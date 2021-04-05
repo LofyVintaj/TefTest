@@ -19,6 +19,7 @@ namespace Tester
 		}
 
 		public List<CustomizeQuestion> object_questions = new List<CustomizeQuestion>();
+		public string test_name;
 		public int count_question;
 		public int page;
 
@@ -60,6 +61,11 @@ namespace Tester
 			if ( page == count_question - 1 )
 			{
 				button2.Visible = false;
+				button5.Visible = true;
+			}
+			else
+			{
+				button5.Visible = false;
 			}
 		}
 
@@ -82,6 +88,19 @@ namespace Tester
 			{
 				object_questions[page].Hide();
 			}
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			string connectionString = "TestBook";
+			//MongoClient client = new MongoClient(connectionString);
+			//IMongoDatabase database = client.GetDatabase("tester");
+			MongoCRUD db = new MongoCRUD(connectionString);
+			//db.InsertRecord("User", < Object >);
+			db.InsertRecord("Test", new Test { 
+				name = test_name, 
+				count_question = count_question 
+			});
 		}
 	}
 }

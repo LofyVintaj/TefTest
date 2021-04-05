@@ -21,9 +21,8 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-            
-
             int count_question;
+            string test_name;
             if (textBox1.Text == "0")
 			{
                 MessageBox.Show(
@@ -36,12 +35,13 @@ namespace Tester
                 this.Show();
             }
             count_question = Int32.Parse(textBox1.Text);
+            test_name = textBox2.Text;
             List<CustomizeQuestion> object_questions = new List<CustomizeQuestion>();
-
+            
             for (int i = 0; i < count_question; i++)
             {
                 object_questions.Add(new CustomizeQuestion());
-            }
+            } 
 
             for (int i = 0; i < count_question; i++)
             {
@@ -50,6 +50,8 @@ namespace Tester
                object_questions[i].count_question = count_question;
                object_questions[0].Show();
             }
+
+            object_questions[count_question - 1].test_name = test_name;
 
             this.Hide();
 
