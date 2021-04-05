@@ -33,6 +33,7 @@ namespace Tester
 			{
 				MessageBox.Show(radioButton1.Text);
 				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
+				
 				frm.Show();
 			}
 			if (radioButton2.Checked)
