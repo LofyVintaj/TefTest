@@ -19,6 +19,7 @@ namespace Tester
 		}
 
 		public List<CustomizeQuestion> object_questions = new List<CustomizeQuestion>();
+		public Test test = new Test();
 		public string test_name;
 		public int count_question;
 		public int page;

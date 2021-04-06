@@ -52,7 +52,9 @@ namespace Tester
         {
             get; set;
         }
-    }
+		public List<object> questions = new List<object>();
+		//public var questions = new List<object>();
+	}
 
     // Объекты вопросов
     public class QuestionChoiseAnser
@@ -67,7 +69,7 @@ namespace Tester
     }
     public class QuestionInsertWordQuestion
     {
-        public String text { get; set; }
+        public string text { get; set; }
     }
 
     public class MongoCRUD
@@ -83,5 +85,21 @@ namespace Tester
             var collection = db.GetCollection<T>(table);
             collection.InsertOne(record);
         }
-    }
+		//public void GetRecord<T>(string table, T record)
+		//{
+		//    var collection = db.GetCollection<T>(table);
+		//    collection.InsertOne(record);
+		//}
+		//public void GetCollection<T>(string table, T record)
+		//{
+		//    var collection = db.GetCollection<T>(table);
+		//    collection.InsertOne(record);
+		//}
+
+		public void SearchRecord<T>(string table)
+		{
+			var collection = db.GetCollection<T>(table);
+			var result = collection.Find(Builders<T>.Filter.Eq("_id", "507f1f77bcf86cd799439011"));
+		}
+	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,8 @@ namespace Tester
 
 	public partial class CustomizeTerminQuestion : Form
 	{
-		QuestionTermin object_question = new QuestionTermin();
-
+		public QuestionTermin object_question = new QuestionTermin();
+		public Test test = new Test();
 		public CustomizeTerminQuestion()
 		{
 			InitializeComponent();
@@ -29,7 +30,10 @@ namespace Tester
 		{
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
-			
+
+			//var _collection = db.GetCollection<BsonDocument>("Test");
+			//var filter = db<BsonDocument>.Filter.Eq("_id", "4142142");
+			//var result = _collection.Find(filter);
 
 			object_question.termin_text = richTextBox1.Text;
 			object_question.termin_value = textBox1.Text;

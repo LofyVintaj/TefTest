@@ -23,6 +23,7 @@ namespace Tester
 		{
             int count_question;
             string test_name;
+            Test test = new Test();
             if (textBox1.Text == "0")
 			{
                 MessageBox.Show(
@@ -48,6 +49,7 @@ namespace Tester
                object_questions[i].Text = Convert.ToString(i);
                object_questions[i].object_questions = object_questions;
                object_questions[i].count_question = count_question;
+               object_questions[i].test = test;
                object_questions[0].Show();
             }
 
