@@ -20,6 +20,7 @@ namespace Tester
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             string path = "admin.txt";
             StreamReader fileI = new StreamReader(path);
             string line = fileI.ReadLine();
@@ -27,7 +28,7 @@ namespace Tester
             var line2 = File.ReadLines(path).ElementAt(1);
             string username = line1;
             string password = line2;
-            if (username == textBox1.Text & password == textBox2.Text)
+            if (username == textBox3.Text & password == textBox2.Text)
             {
                 label1.Text = " yeah, you entered ";
                 Admin admin = new Admin();
@@ -41,7 +42,7 @@ namespace Tester
                         MessageBoxIcon.Information,
                         MessageBoxDefaultButton.Button1,
                         MessageBoxOptions.DefaultDesktopOnly);
-                textBox1.Text = "";
+                textBox3.Text = "";
                 textBox2.Text = "";
             } 
             label2.Text = line1;
@@ -53,12 +54,27 @@ namespace Tester
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            this.Cursor = System.Windows.Forms.Cursors.Default;
         }
 
-		private void Login_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
 		{
-            this.Cursor = Cursors.Default;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
         }
-    }
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+        }
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+        }
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+        }
+	}
 }
