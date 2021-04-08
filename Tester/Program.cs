@@ -86,8 +86,8 @@ namespace Tester
             collection.InsertOne(record);
         }
 
-        public void SearchRecord<T>(string table, string name)
-		{
+        public object SearchRecord<T>(string table, string name)
+        {
             var dbClient = new MongoClient("mongodb://localhost:27017");
 
             IMongoDatabase db = dbClient.GetDatabase("TestBook");
@@ -96,34 +96,56 @@ namespace Tester
             var filter = Builders<BsonDocument>.Filter.Eq("name", "leha");
 
             var doc = cars.Find(filter).FirstOrDefault();
-            Console.WriteLine(doc.ToString());
+			Console.WriteLine(doc.ToString());
+			return doc;
+		}
 
-            //var collection = db.GetCollection<T>(table);
-            //var result = collection.Find(Builders<T>.Filter.Eq("name", name));
+        async public void UpdateQuestionsRecord<T>(string table, string name, object question)
+		{
+            var dbClient = new MongoClient("mongodb://localhost:27017");
 
-            //Console.WriteLine(result.ToString());
-            //         Console.WriteLine(result);
-            //         return result;
+            IMongoDatabase db = dbClient.GetDatabase("TestBook");
+            var test = db.GetCollection<Test>("Test");
+
+            // Взял тот документ который мне нужен
+            var filter = Builders<Test>.Filter.Eq("name", name);
+
+            var doc = test.Find(filter).FirstOrDefault();
+            Console.WriteLine("ОООПА");
+            Console.WriteLine(doc);
+            Console.WriteLine(doc.questions);
+            doc.questions.Add(question);
+            doc.questions.Add(question);
+            doc.questions.Add(question);
+            doc.questions.Add(question);
+            Console.WriteLine(doc.questions);
+			foreach (object p in doc.questions)
+			{
+				Console.WriteLine("l l l");
+				//Console.WriteLine(p.GetType().GetProperties());
+
+    //            foreach (var s in p.GetType().GetProperties())
+				//{
+    //                Console.WriteLine(s.GetValue(s));
+    //            }
+                var isAllPropertiesNull = p.GetType()
+                                            .GetProperties()
+                                            .Select(pi => pi.GetValue(p));
+                Console.WriteLine(isAllPropertiesNull);
+
+                foreach (var s in isAllPropertiesNull)
+				{
+					Console.WriteLine(s.GetType());
+				}
+			}
+
+            //doc.Select(a => a.GetType()).Select(a => a.Get.doc.que);
+            //Console.WriteLine(doc);
 
 
-            //var filter = Builders<Test>.Filter.Eq("name", "leha4");
-
-            //var filter = new BsonDocument("name", "leha4");
-            //var results = collection.Find(filter).ToList();
-
-            //foreach (var p in results)
-            //{
-            //    Console.WriteLine(p);
-            //    Console.WriteLine("KOPEC");
-            //}
-
-
-
-            //var firstDocument = collection.Find(new BsonDocument()).FirstOrDefault();
-            //Console.WriteLine(firstDocument.ToBson().ToString
-            //var results = collection.Find(filter).ToList();
-
-
+            // теперь нужно достать отдельный метод и обновить его
+            //var update = Builders<BsonDocument>.Update.Set("questions", "Google Inc.");
+            //var result = await cars.UpdateOneAsync(filter, update);
         }
 	}
 }

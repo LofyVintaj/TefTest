@@ -76,5 +76,10 @@ namespace Tester
 		{
             this.Cursor = System.Windows.Forms.Cursors.Default;
         }
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+            Application.Exit();
+        }
 	}
 }

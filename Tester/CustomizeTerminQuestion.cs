@@ -31,13 +31,13 @@ namespace Tester
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 
-			//var _collection = db.GetCollection<BsonDocument>("Test");
-			//var filter = db<BsonDocument>.Filter.Eq("_id", "4142142");
-			//var result = _collection.Find(filter);
+			//var b = db.SearchRecord<Test>("Test", "leha5");
+			//Console.WriteLine("Search_Second");
+			//Console.WriteLine(b);
 
 			object_question.termin_text = richTextBox1.Text;
 			object_question.termin_value = textBox1.Text;
-
+			db.UpdateQuestionsRecord<Test>("Test", "leah16", object_question);
 			this.Hide();
 		}
 

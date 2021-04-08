@@ -34,9 +34,10 @@ namespace Tester
         private void Form1_Load(object sender, EventArgs e)
         {
             Console.WriteLine("We had load");
-            string connectionString = "TestBook";
-            MongoCRUD db = new MongoCRUD(connectionString);
-            db.SearchRecord<Test>("Test", "leha4");
+            //string connectionString = "TestBook";
+            //MongoCRUD db = new MongoCRUD(connectionString);
+			//db.SearchRecord<Test>("Test", "leha4");
+			//db.UpdateQuestionsRecord<Test>("Test", "leha4");
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -53,5 +54,12 @@ namespace Tester
 		{
 
 		}
+
+		private void panel1_MouseDown(object sender, MouseEventArgs e)
+		{
+            panel1.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
+        }
 	}
 }
