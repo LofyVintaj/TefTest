@@ -55,5 +55,10 @@ namespace Tester
         {
 
         }
+
+		private void Login_Load(object sender, EventArgs e)
+		{
+            this.Cursor = Cursors.Default;
+        }
     }
 }

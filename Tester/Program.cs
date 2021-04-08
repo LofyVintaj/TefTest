@@ -36,7 +36,7 @@ namespace Tester
     public class RadioDataQuestion
     {
         // Объект теста
-        public String name { get; set; }
+        public string name { get; set; }
         public bool or_right { get; set; }
     }
 
@@ -47,7 +47,7 @@ namespace Tester
 
         [BsonId] // id
         public Guid Id { get; set; }
-        public String name { get; set; }
+        public string name { get; set; }
         public int count_question
         {
             get; set;
@@ -63,8 +63,8 @@ namespace Tester
     }
     public class QuestionTermin
     {
-        public String termin_text { get; set; }
-        public String termin_value { get; set; }
+        public string termin_text { get; set; }
+        public string termin_value { get; set; }
         public int appraisal { get; set; }
     }
     public class QuestionInsertWordQuestion
@@ -85,21 +85,45 @@ namespace Tester
             var collection = db.GetCollection<T>(table);
             collection.InsertOne(record);
         }
-		//public void GetRecord<T>(string table, T record)
-		//{
-		//    var collection = db.GetCollection<T>(table);
-		//    collection.InsertOne(record);
-		//}
-		//public void GetCollection<T>(string table, T record)
-		//{
-		//    var collection = db.GetCollection<T>(table);
-		//    collection.InsertOne(record);
-		//}
 
-		public void SearchRecord<T>(string table)
+        public void SearchRecord<T>(string table, string name)
 		{
-			var collection = db.GetCollection<T>(table);
-			var result = collection.Find(Builders<T>.Filter.Eq("_id", "507f1f77bcf86cd799439011"));
-		}
+            var dbClient = new MongoClient("mongodb://localhost:27017");
+
+            IMongoDatabase db = dbClient.GetDatabase("TestBook");
+            var cars = db.GetCollection<BsonDocument>("Test");
+
+            var filter = Builders<BsonDocument>.Filter.Eq("name", "leha");
+
+            var doc = cars.Find(filter).FirstOrDefault();
+            Console.WriteLine(doc.ToString());
+
+            //var collection = db.GetCollection<T>(table);
+            //var result = collection.Find(Builders<T>.Filter.Eq("name", name));
+
+            //Console.WriteLine(result.ToString());
+            //         Console.WriteLine(result);
+            //         return result;
+
+
+            //var filter = Builders<Test>.Filter.Eq("name", "leha4");
+
+            //var filter = new BsonDocument("name", "leha4");
+            //var results = collection.Find(filter).ToList();
+
+            //foreach (var p in results)
+            //{
+            //    Console.WriteLine(p);
+            //    Console.WriteLine("KOPEC");
+            //}
+
+
+
+            //var firstDocument = collection.Find(new BsonDocument()).FirstOrDefault();
+            //Console.WriteLine(firstDocument.ToBson().ToString
+            //var results = collection.Find(filter).ToList();
+
+
+        }
 	}
 }

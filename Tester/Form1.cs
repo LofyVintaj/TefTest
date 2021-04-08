@@ -33,7 +33,10 @@ namespace Tester
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("We had load");
+            string connectionString = "TestBook";
+            MongoCRUD db = new MongoCRUD(connectionString);
+            db.SearchRecord<Test>("Test", "leha4");
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -45,5 +48,10 @@ namespace Tester
 		{
             Application.Exit();
         }
-    }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

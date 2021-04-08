@@ -63,8 +63,7 @@ namespace Tester
                 name = test_name,
                 count_question = count_question
             });
-
-            object_questions[count_question - 1].test_name = test_name;
+			object_questions[count_question - 1].test_name = test_name;
 
             this.Hide();
 

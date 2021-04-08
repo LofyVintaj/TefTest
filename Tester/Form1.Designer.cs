@@ -41,7 +41,7 @@
 			this.label1.Cursor = System.Windows.Forms.Cursors.Default;
 			this.label1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label1.ForeColor = System.Drawing.SystemColors.Control;
-			this.label1.Location = new System.Drawing.Point(577, 278);
+			this.label1.Location = new System.Drawing.Point(560, 194);
 			this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(163, 59);
@@ -52,9 +52,11 @@
 			// button1
 			// 
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button1.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.button1.Location = new System.Drawing.Point(430, 295);
-			this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.ForeColor = System.Drawing.Color.Cyan;
+			this.button1.Location = new System.Drawing.Point(386, 311);
+			this.button1.Margin = new System.Windows.Forms.Padding(5);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(125, 41);
 			this.button1.TabIndex = 1;
@@ -64,13 +66,17 @@
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(761, 296);
-			this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.button2.Location = new System.Drawing.Point(756, 311);
+			this.button2.Margin = new System.Windows.Forms.Padding(5);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(125, 41);
 			this.button2.TabIndex = 2;
 			this.button2.Text = "User";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// openFileDialog1
 			// 
@@ -79,12 +85,18 @@
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(1197, 12);
+			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.ForeColor = System.Drawing.Color.Crimson;
+			this.button3.Location = new System.Drawing.Point(1276, 12);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(113, 56);
+			this.button3.Size = new System.Drawing.Size(46, 32);
 			this.button3.TabIndex = 3;
-			this.button3.Text = "Закрыть";
-			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Text = "X";
+			this.button3.UseVisualStyleBackColor = false;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// Form1
@@ -99,8 +111,7 @@
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
