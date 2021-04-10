@@ -154,6 +154,7 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(971, 44);
 			this.panel1.TabIndex = 7;
+			this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
 			// 
 			// FormCreatTest
 			// 

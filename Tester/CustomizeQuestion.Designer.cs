@@ -38,9 +38,9 @@ namespace Tester
 			this.button3 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.button4 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.button6 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace Tester
 			this.radioButton1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.radioButton1.ForeColor = System.Drawing.Color.CornflowerBlue;
 			this.radioButton1.Location = new System.Drawing.Point(60, 170);
-			this.radioButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.radioButton1.Margin = new System.Windows.Forms.Padding(5);
 			this.radioButton1.Name = "radioButton1";
 			this.radioButton1.Size = new System.Drawing.Size(139, 27);
 			this.radioButton1.TabIndex = 1;
@@ -78,7 +78,7 @@ namespace Tester
 			this.radioButton2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.radioButton2.ForeColor = System.Drawing.Color.CornflowerBlue;
 			this.radioButton2.Location = new System.Drawing.Point(60, 230);
-			this.radioButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.radioButton2.Margin = new System.Windows.Forms.Padding(5);
 			this.radioButton2.Name = "radioButton2";
 			this.radioButton2.Size = new System.Drawing.Size(90, 27);
 			this.radioButton2.TabIndex = 2;
@@ -93,7 +93,7 @@ namespace Tester
 			this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.ForeColor = System.Drawing.Color.Cyan;
 			this.button1.Location = new System.Drawing.Point(332, 384);
-			this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button1.Margin = new System.Windows.Forms.Padding(5);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(301, 41);
 			this.button1.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace Tester
 			this.radioButton3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.radioButton3.ForeColor = System.Drawing.Color.CornflowerBlue;
 			this.radioButton3.Location = new System.Drawing.Point(60, 290);
-			this.radioButton3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.radioButton3.Margin = new System.Windows.Forms.Padding(5);
 			this.radioButton3.Name = "radioButton3";
 			this.radioButton3.Size = new System.Drawing.Size(149, 27);
 			this.radioButton3.TabIndex = 4;
@@ -121,7 +121,7 @@ namespace Tester
 			this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.button2.Location = new System.Drawing.Point(832, 487);
-			this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button2.Margin = new System.Windows.Forms.Padding(5);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(125, 41);
 			this.button2.TabIndex = 5;
@@ -135,7 +135,7 @@ namespace Tester
 			this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button3.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.button3.Location = new System.Drawing.Point(14, 487);
-			this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button3.Margin = new System.Windows.Forms.Padding(5);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(125, 41);
 			this.button3.TabIndex = 6;
@@ -149,7 +149,7 @@ namespace Tester
 			this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button5.ForeColor = System.Drawing.Color.Cyan;
 			this.button5.Location = new System.Drawing.Point(832, 487);
-			this.button5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button5.Margin = new System.Windows.Forms.Padding(5);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(125, 41);
 			this.button5.TabIndex = 8;
@@ -168,22 +168,6 @@ namespace Tester
 			this.panel1.Size = new System.Drawing.Size(971, 44);
 			this.panel1.TabIndex = 12;
 			// 
-			// button4
-			// 
-			this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
-			this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button4.ForeColor = System.Drawing.Color.Crimson;
-			this.button4.Location = new System.Drawing.Point(895, 3);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(73, 38);
-			this.button4.TabIndex = 9;
-			this.button4.Text = "X";
-			this.button4.UseVisualStyleBackColor = false;
-			// 
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
@@ -193,6 +177,8 @@ namespace Tester
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(971, 44);
 			this.panel2.TabIndex = 13;
+			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+			this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
 			// 
 			// button6
 			// 
@@ -209,6 +195,23 @@ namespace Tester
 			this.button6.TabIndex = 9;
 			this.button6.Text = "X";
 			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+			this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button4.ForeColor = System.Drawing.Color.Crimson;
+			this.button4.Location = new System.Drawing.Point(895, 3);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(73, 38);
+			this.button4.TabIndex = 9;
+			this.button4.Text = "X";
+			this.button4.UseVisualStyleBackColor = false;
 			// 
 			// CustomizeQuestion
 			// 
@@ -227,7 +230,7 @@ namespace Tester
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "CustomizeQuestion";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "CustomizeQuestion";

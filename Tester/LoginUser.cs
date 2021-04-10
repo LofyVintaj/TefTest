@@ -36,9 +36,9 @@ namespace Tester
 				FIO = FIO,
 				Group = Group
 			});
-			User frm = new User();
+			UserForm frm = new UserForm();
 			frm.Show();
-			frm.label1.Text = FIO;
+			frm.label2.Text = FIO;
 		}
 	}
 }
