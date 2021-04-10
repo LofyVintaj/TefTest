@@ -69,7 +69,6 @@ D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Form1.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.FormCreatTest.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Login.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
-D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.UserLogin.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.cache
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.exe

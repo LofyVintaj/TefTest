@@ -18,13 +18,6 @@ namespace Tester
         [STAThread]
         static void Main()
         {
-            //string connectionString = "TestBook";
-            //MongoClient client = new MongoClient(connectionString);
-            //IMongoDatabase database = client.GetDatabase("tester");
-            //MongoCRUD db = new MongoCRUD(connectionString);
-            //db.InsertRecord("User", < Object >);
-            //db.InsertRecord("Test", new Test { name = "IT", count_question = 4 
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
@@ -70,8 +63,9 @@ namespace Tester
     // Объекты вопросов
     public class QuestionChoiseAnser
     {
-        public List<RadioDataQuestion> object_questions = new List<RadioDataQuestion>();
-    }
+		public string text { get; set; }
+		public List<RadioDataQuestion> object_questions = new List<RadioDataQuestion>();
+	}
     public class QuestionTermin
     {
         public string termin_text { get; set; }

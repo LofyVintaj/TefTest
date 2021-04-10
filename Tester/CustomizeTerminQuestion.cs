@@ -15,6 +15,7 @@ namespace Tester
 	public partial class CustomizeTerminQuestion : Form
 	{
 		public QuestionTermin object_question = new QuestionTermin();
+		public string test_name;
 		public Test test = new Test();
 		public CustomizeTerminQuestion()
 		{
@@ -32,11 +33,16 @@ namespace Tester
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.termin_text = richTextBox1.Text;
 			object_question.termin_value = textBox1.Text;
-			db.UpdateQuestionsRecord<Test>("Test", "leha", object_question);
+			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question);
 			this.Hide();
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void CustomizeTerminQuestion_Load(object sender, EventArgs e)
 		{
 
 		}

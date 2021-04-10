@@ -48,9 +48,9 @@ namespace Tester
 			this.label1.Location = new System.Drawing.Point(412, 60);
 			this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(93, 33);
+			this.label1.Size = new System.Drawing.Size(103, 33);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Termin";
+			this.label1.Text = "Термин";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// button1
@@ -158,6 +158,7 @@ namespace Tester
 			this.Name = "CustomizeTerminQuestion";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "CustomizeTerminQuestion";
+			this.Load += new System.EventHandler(this.CustomizeTerminQuestion_Load);
 			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();

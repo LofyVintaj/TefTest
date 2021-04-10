@@ -174,12 +174,6 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserLogin.Designer.cs">
-      <DependentUpon>UserLogin.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,9 +213,6 @@
     </Compile>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserLogin.resx">
-      <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />

@@ -41,11 +41,12 @@ namespace Tester
 			// label1
 			// 
 			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
 			this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
 			this.label1.Location = new System.Drawing.Point(23, 126);
 			this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(51, 23);
+			this.label1.Size = new System.Drawing.Size(58, 26);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Текст";
 			// 
@@ -128,6 +129,7 @@ namespace Tester
 			this.Name = "CustiomizeInstertWordQuestion";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "CustiomizeInstertWordQuestion";
+			this.Load += new System.EventHandler(this.CustiomizeInstertWordQuestion_Load);
 			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();

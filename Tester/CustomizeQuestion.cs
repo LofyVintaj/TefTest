@@ -34,16 +34,19 @@ namespace Tester
 			if (radioButton1.Checked)
 			{
 				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
+				frm.test_name = test_name;
 				frm.Show();
 			}
 			if (radioButton2.Checked)
 			{
 				CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
+				frm.test_name = test_name;
 				frm.Show();
 			}
 			if (radioButton3.Checked)
 			{
 				CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
+				frm.test_name = test_name;
 				frm.Show();
 			}
 		}

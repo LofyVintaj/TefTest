@@ -139,6 +139,7 @@ namespace Tester
 			this.Name = "CustomizeChoiseAnswerQuestion";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "CustomizeChoiseAnswerQuestion";
+			this.Load += new System.EventHandler(this.CustomizeChoiseAnswerQuestion_Load);
 			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
