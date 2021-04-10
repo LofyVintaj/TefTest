@@ -69,5 +69,25 @@ namespace Tester.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap J4o {
+            get {
+                object obj = ResourceManager.GetObject("J4o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblr_o7vrxl8Uk11runoqyo10_540 {
+            get {
+                object obj = ResourceManager.GetObject("tumblr_o7vrxl8Uk11runoqyo10_540", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

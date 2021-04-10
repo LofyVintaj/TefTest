@@ -27,7 +27,7 @@ namespace Tester
             // In this way can create new test question in admin 
             Login frm = new Login();    
             frm.Show();
-            this.Hide();
+            // this.Hide();
 
         }
 
@@ -52,7 +52,8 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-
+            LoginUser frm = new LoginUser();
+            frm.Show();
 		}
 
 		private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -61,5 +62,15 @@ namespace Tester
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
 	}
 }

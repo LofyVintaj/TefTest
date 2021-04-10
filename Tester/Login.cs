@@ -50,6 +50,7 @@ namespace Tester
 
             fileI.Close();  
             this.Hide();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -79,7 +80,30 @@ namespace Tester
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-            Application.Exit();
+            //Application.Exit();
+            this.Hide();
+        }
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox3_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+            panel1.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
         }
 	}
 }

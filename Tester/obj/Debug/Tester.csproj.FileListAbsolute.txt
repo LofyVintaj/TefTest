@@ -68,7 +68,6 @@ D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.CustomizeQuestio
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Form1.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.FormCreatTest.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Login.resources
-D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.LoginError.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.Properties.Resources.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.UserLogin.resources
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csproj.GenerateResource.cache
@@ -97,3 +96,5 @@ D:\college\Научная\Tester\Tester\Tester\bin\Debug\MongoDB.Driver.Core.xml
 D:\college\Научная\Tester\Tester\Tester\bin\Debug\System.Buffers.xml
 D:\college\Научная\Tester\Tester\Tester\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.csproj.CopyComplete
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.LoginUser.resources
+D:\college\Научная\Tester\Tester\Tester\obj\Debug\Tester.User.resources

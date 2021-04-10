@@ -33,20 +33,16 @@ namespace Tester
 		{
 			if (radioButton1.Checked)
 			{
-				MessageBox.Show(radioButton1.Text);
 				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
-				
 				frm.Show();
 			}
 			if (radioButton2.Checked)
 			{
-				MessageBox.Show(radioButton2.Text);
 				CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
 				frm.Show();
 			}
 			if (radioButton3.Checked)
 			{
-				MessageBox.Show(radioButton3.Text);
 				CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
 				frm.Show();
 			}
@@ -75,26 +71,26 @@ namespace Tester
 			object_questions[page + 1].Show();
 			object_questions[page].Hide();
 
-			if (radioButton1.Checked)
-			{
-				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
-				QuestionChoiseAnser object_question = new QuestionChoiseAnser();
-				//object_questions.Add(object_question);
-				frm.Show();
-			}
-			if (radioButton2.Checked)
-			{
-				CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
-				//object_questions.Add(object_question);
-				frm.Show();
-			}
-			if (radioButton3.Checked)
-			{
-				CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
-				QuestionInsertWordQuestion object_question = new QuestionInsertWordQuestion();
-				//object_questions.Add(object_question);
-				frm.Show();
-			}
+			//if (radioButton1.Checked)
+			//{
+			//	CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
+			//	QuestionChoiseAnser object_question = new QuestionChoiseAnser();
+			//	//object_questions.Add(object_question);
+			//	frm.Show();
+			//}
+			//if (radioButton2.Checked)
+			//{
+			//	CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
+			//	//object_questions.Add(object_question);
+			//	frm.Show();
+			//}
+			//if (radioButton3.Checked)
+			//{
+			//	CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
+			//	QuestionInsertWordQuestion object_question = new QuestionInsertWordQuestion();
+			//	//object_questions.Add(object_question);
+			//	frm.Show();
+			//}
 
 		}
 

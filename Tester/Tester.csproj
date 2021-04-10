@@ -160,11 +160,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginError.cs">
+    <Compile Include="LoginUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginError.Designer.cs">
-      <DependentUpon>LoginError.cs</DependentUpon>
+    <Compile Include="LoginUser.Designer.cs">
+      <DependentUpon>LoginUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginError.resx">
-      <DependentUpon>LoginError.cs</DependentUpon>
+    <EmbeddedResource Include="LoginUser.resx">
+      <DependentUpon>LoginUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -235,6 +235,8 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\J4o.gif" />
+    <None Include="Resources\tumblr_o7vrxl8Uk11runoqyo10_540.gif" />
     <None Include="Resources\gory_zelen_priroda_202541_1920x1080.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

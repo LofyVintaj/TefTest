@@ -40,6 +40,17 @@ namespace Tester
         public bool or_right { get; set; }
     }
 
+    public class Student
+    {
+        // Объект теста
+
+        [BsonId] // id
+        public Guid Id { get; set; }
+        public string FIO { get; set; }
+        public string Group { get; set; }
+        public int Assessment { get; set; }
+    }
+
 
     public class Test
     {
@@ -115,11 +126,11 @@ namespace Tester
             Console.WriteLine(doc);
             Console.WriteLine(doc.questions);
             doc.questions.Add(question);
-            doc.questions.Add(question);
-            doc.questions.Add(question);
-            doc.questions.Add(question);
             Console.WriteLine(doc.questions);
-			foreach (object p in doc.questions)
+            var update = Builders<Test>.Update.Set(s => s.questions, question);
+            var result = await test.UpdateOneAsync(filter, update);
+
+            foreach (object p in doc.questions)
 			{
 				Console.WriteLine("l l l");
 				//Console.WriteLine(p.GetType().GetProperties());
@@ -138,14 +149,6 @@ namespace Tester
 					Console.WriteLine(s.GetType());
 				}
 			}
-
-            //doc.Select(a => a.GetType()).Select(a => a.Get.doc.que);
-            //Console.WriteLine(doc);
-
-
-            // теперь нужно достать отдельный метод и обновить его
-            //var update = Builders<BsonDocument>.Update.Set("questions", "Google Inc.");
-            //var result = await cars.UpdateOneAsync(filter, update);
         }
 	}
 }

@@ -30,14 +30,9 @@ namespace Tester
 		{
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
-
-			//var b = db.SearchRecord<Test>("Test", "leha5");
-			//Console.WriteLine("Search_Second");
-			//Console.WriteLine(b);
-
 			object_question.termin_text = richTextBox1.Text;
 			object_question.termin_value = textBox1.Text;
-			db.UpdateQuestionsRecord<Test>("Test", "leah16", object_question);
+			db.UpdateQuestionsRecord<Test>("Test", "leha", object_question);
 			this.Hide();
 		}
 
