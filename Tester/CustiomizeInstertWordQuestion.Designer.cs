@@ -90,6 +90,7 @@ namespace Tester
 			this.button6.TabIndex = 9;
 			this.button6.Text = "X";
 			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// panel2
 			// 
@@ -101,6 +102,7 @@ namespace Tester
 			this.panel2.Size = new System.Drawing.Size(971, 44);
 			this.panel2.TabIndex = 15;
 			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+			this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
 			// 
 			// label2
 			// 

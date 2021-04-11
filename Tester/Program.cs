@@ -69,7 +69,7 @@ namespace Tester
         public string question_name = "QuestionChoiseAnser";
         public ObjectId Id { get; set; }
         public string text { get; set; }
-        public List<RadioDataQuestion> object_questions { get; set; }
+        public List<RadioDataQuestion> object_buttons { get; set; }
     }
     public class QuestionTermin
     {
@@ -121,5 +121,17 @@ namespace Tester
             var update = Builders<Test>.Update.Set(s => s.questions, doc.questions);
             var result = await collection.UpdateOneAsync(filter, update);
 		}
-	}
+
+        async public void UpdateQuestionChoiseAnswerRecord<T>(string table, string name, object question, int page)
+        {
+            var collection = db.GetCollection<Test>(table);
+            var filter = Builders<Test>.Filter.Eq("name", name);
+            var doc = collection.Find(filter).FirstOrDefault();
+            //doc.questions[page].object_buttons;
+            var update = Builders<Test>.Update.Set(s => s.questions, doc.questions);
+            var result = await collection.UpdateOneAsync(filter, update);
+        }
+
+
+    }
 }

@@ -37,5 +37,40 @@ namespace Tester
 		{
 
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+			string connectionString = "TestBook";
+			MongoCRUD db = new MongoCRUD(connectionString);
+			//db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
+
+			var btn = new Button();
+			btn.Text = textBox1.Text;
+			btn.Top = 480;
+			btn.Left = 20;
+			btn.ForeColor = Color.DarkOrchid;
+			btn.FlatAppearance.BorderColor = Color.DarkOrchid;
+			btn.Width = 125;
+			btn.Height = 41;
+			Controls.Add(btn);
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void panel2_MouseDown(object sender, MouseEventArgs e)
+		{
+			panel2.Capture = false;
+			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+			this.WndProc(ref m);
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
 	}
 }

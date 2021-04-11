@@ -42,5 +42,17 @@ namespace Tester
 		{
 
 		}
+
+		private void panel2_MouseDown(object sender, MouseEventArgs e)
+		{
+			panel2.Capture = false;
+			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+			this.WndProc(ref m);
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
 	}
 }
