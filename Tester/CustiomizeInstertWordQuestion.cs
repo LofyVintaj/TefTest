@@ -15,6 +15,7 @@ namespace Tester
 
 		public QuestionInsertWordQuestion object_question = new QuestionInsertWordQuestion();
 		public string test_name;
+		public int page;
 		public Test test = new Test();
 
 		public CustiomizeInstertWordQuestion()
@@ -28,11 +29,16 @@ namespace Tester
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.text = richTextBox1.Text;
 			//object_question.termin_value = textBox1.Text;
-			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question);
+			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
 			this.Hide();
 		}
 
 		private void CustiomizeInstertWordQuestion_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
 		{
 
 		}

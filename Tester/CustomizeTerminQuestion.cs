@@ -16,6 +16,7 @@ namespace Tester
 	{
 		public QuestionTermin object_question = new QuestionTermin();
 		public string test_name;
+		public int page;
 		public Test test = new Test();
 		public CustomizeTerminQuestion()
 		{
@@ -29,11 +30,13 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			Console.WriteLine("Page");
+			Console.WriteLine(page);
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.termin_text = richTextBox1.Text;
 			object_question.termin_value = textBox1.Text;
-			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question);
+			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
 			this.Hide();
 		}
 
@@ -43,6 +46,11 @@ namespace Tester
 		}
 
 		private void CustomizeTerminQuestion_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void CustomizeTerminQuestion_MouseDown(object sender, MouseEventArgs e)
 		{
 
 		}

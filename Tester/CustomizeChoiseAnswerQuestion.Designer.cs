@@ -36,6 +36,7 @@ namespace Tester
 			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -53,6 +54,7 @@ namespace Tester
 			// 
 			// button1
 			// 
+			this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.ForeColor = System.Drawing.Color.Cyan;
 			this.button1.Location = new System.Drawing.Point(816, 632);
@@ -121,12 +123,23 @@ namespace Tester
 			this.label3.TabIndex = 17;
 			this.label3.Text = "Правильные варианты ответа";
 			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(23, 632);
+			this.button2.Margin = new System.Windows.Forms.Padding(5);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 18;
+			this.button2.Text = "button2";
+			this.button2.UseVisualStyleBackColor = true;
+			// 
 			// CustomizeChoiseAnswerQuestion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(955, 687);
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.richTextBox1);
@@ -155,5 +168,6 @@ namespace Tester
 		private System.Windows.Forms.RichTextBox richTextBox1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button button2;
 	}
 }

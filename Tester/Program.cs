@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MongoDB.Bson;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 
 namespace Tester
@@ -49,31 +52,37 @@ namespace Tester
     {
         // Объект теста
 
-        [BsonId] // id
-        public Guid Id { get; set; }
+        //[BsonId] // id
+        public ObjectId Id { get; set; }
         public string name { get; set; }
-        public int count_question
-        {
-            get; set;
-        }
-		public List<object> questions = new List<object>();
-		//public var questions = new List<object>();
-	}
+        public int count_question { get; set; }
+        //[BsonSerializer(typeof(TestingObjectTypeSerializer))]
+
+        //public List<object> questions = new List<object>();
+        public object[] questions { get; set; }
+        //public var questions = new List<object>();
+    }
 
     // Объекты вопросов
     public class QuestionChoiseAnser
     {
-		public string text { get; set; }
-		public List<RadioDataQuestion> object_questions = new List<RadioDataQuestion>();
-	}
+        public string question_name = "QuestionChoiseAnser";
+        public ObjectId Id { get; set; }
+        public string text { get; set; }
+        public List<RadioDataQuestion> object_questions { get; set; }
+    }
     public class QuestionTermin
     {
+        public string question_name = "QuestionTermin";
+        public ObjectId Id { get; set; }
         public string termin_text { get; set; }
         public string termin_value { get; set; }
         public int appraisal { get; set; }
     }
     public class QuestionInsertWordQuestion
     {
+        public string question_name = "QuestionInsertWordQuestion";
+        public ObjectId Id { get; set; }
         public string text { get; set; }
     }
 
@@ -91,58 +100,26 @@ namespace Tester
             collection.InsertOne(record);
         }
 
-        public object SearchRecord<T>(string table, string name)
-        {
-            var dbClient = new MongoClient("mongodb://localhost:27017");
+  //      public object SearchRecord<T>(string table, string name)
+  //      {
+  //          var collection = db.GetCollection<Test>(table);
 
-            IMongoDatabase db = dbClient.GetDatabase("TestBook");
-            var cars = db.GetCollection<BsonDocument>("Test");
+  //          var filter = Builders<BsonDocument>.Filter.Eq("name", name);
 
-            var filter = Builders<BsonDocument>.Filter.Eq("name", "leha");
+  //          var doc = collection.Find(filter).FirstOrDefault();
+		//	Console.WriteLine(doc.ToString());
+		//	return doc;
+		//}
 
-            var doc = cars.Find(filter).FirstOrDefault();
-			Console.WriteLine(doc.ToString());
-			return doc;
-		}
-
-        async public void UpdateQuestionsRecord<T>(string table, string name, object question)
+        // Обонвление тестов ( Добавление обеьктов вопроса в них) 
+        async public void UpdateQuestionsRecord<T>(string table, string name, object question, int page)
 		{
-            var dbClient = new MongoClient("mongodb://localhost:27017");
-
-            IMongoDatabase db = dbClient.GetDatabase("TestBook");
-            var test = db.GetCollection<Test>("Test");
-
-            // Взял тот документ который мне нужен
+            var collection = db.GetCollection<Test>(table);
             var filter = Builders<Test>.Filter.Eq("name", name);
-
-            var doc = test.Find(filter).FirstOrDefault();
-            Console.WriteLine("ОООПА");
-            Console.WriteLine(doc);
-            Console.WriteLine(doc.questions);
-            doc.questions.Add(question);
-            Console.WriteLine(doc.questions);
-            var update = Builders<Test>.Update.Set(s => s.questions, question);
-            var result = await test.UpdateOneAsync(filter, update);
-
-            foreach (object p in doc.questions)
-			{
-				Console.WriteLine("l l l");
-				//Console.WriteLine(p.GetType().GetProperties());
-
-    //            foreach (var s in p.GetType().GetProperties())
-				//{
-    //                Console.WriteLine(s.GetValue(s));
-    //            }
-                var isAllPropertiesNull = p.GetType()
-                                            .GetProperties()
-                                            .Select(pi => pi.GetValue(p));
-                Console.WriteLine(isAllPropertiesNull);
-
-                foreach (var s in isAllPropertiesNull)
-				{
-					Console.WriteLine(s.GetType());
-				}
-			}
-        }
+            var doc = collection.Find(filter).FirstOrDefault();
+            doc.questions[page] = question;
+            var update = Builders<Test>.Update.Set(s => s.questions, doc.questions);
+            var result = await collection.UpdateOneAsync(filter, update);
+		}
 	}
 }

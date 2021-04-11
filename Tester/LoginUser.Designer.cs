@@ -68,6 +68,8 @@ namespace Tester
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(662, 44);
 			this.panel1.TabIndex = 11;
+			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+			this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
 			// 
 			// button1
 			// 
@@ -173,7 +175,7 @@ namespace Tester
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "LoginUser";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "LoginUser";

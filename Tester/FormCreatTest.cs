@@ -37,6 +37,7 @@ namespace Tester
             }
             count_question = Int32.Parse(textBox1.Text);
             test_name = textBox2.Text;
+
             List<CustomizeQuestion> object_questions = new List<CustomizeQuestion>();
             
             for (int i = 0; i < count_question; i++)
@@ -59,11 +60,15 @@ namespace Tester
             //IMongoDatabase database = client.GetDatabase("tester");
             MongoCRUD db = new MongoCRUD(connectionString);
             //db.InsertRecord("User", < Object >);
+
+            // здесь не было добавлено значение и при расшерении класса он просто добавляет OBject вместо Array
             db.InsertRecord("Test", new Test
             {
                 name = test_name,
-                count_question = count_question
+                count_question = count_question,
+                questions = new object[count_question]
             });
+
 			object_questions[count_question - 1].test_name = test_name;
 
             this.Hide();

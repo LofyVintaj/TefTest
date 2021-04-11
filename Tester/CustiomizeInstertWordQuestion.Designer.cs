@@ -55,7 +55,7 @@ namespace Tester
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.ForeColor = System.Drawing.Color.Cyan;
 			this.button1.Location = new System.Drawing.Point(832, 487);
-			this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.button1.Margin = new System.Windows.Forms.Padding(5);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(125, 41);
 			this.button1.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace Tester
 			this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.richTextBox1.ForeColor = System.Drawing.Color.White;
 			this.richTextBox1.Location = new System.Drawing.Point(27, 163);
-			this.richTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.richTextBox1.Margin = new System.Windows.Forms.Padding(5);
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.Size = new System.Drawing.Size(903, 256);
 			this.richTextBox1.TabIndex = 2;
@@ -100,6 +100,7 @@ namespace Tester
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(971, 44);
 			this.panel2.TabIndex = 15;
+			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
 			// 
 			// label2
 			// 
@@ -125,7 +126,7 @@ namespace Tester
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "CustiomizeInstertWordQuestion";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "CustiomizeInstertWordQuestion";

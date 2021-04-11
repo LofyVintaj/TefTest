@@ -159,6 +159,7 @@ namespace Tester
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "CustomizeTerminQuestion";
 			this.Load += new System.EventHandler(this.CustomizeTerminQuestion_Load);
+			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CustomizeTerminQuestion_MouseDown);
 			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
