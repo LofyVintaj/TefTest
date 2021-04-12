@@ -39,6 +39,7 @@ namespace Tester
 			this.button2 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -161,12 +162,25 @@ namespace Tester
 			this.textBox1.Size = new System.Drawing.Size(601, 24);
 			this.textBox1.TabIndex = 20;
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
+			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.groupBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.groupBox1.Location = new System.Drawing.Point(23, 458);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(908, 269);
+			this.groupBox1.TabIndex = 21;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Список";
+			// 
 			// CustomizeChoiseAnswerQuestion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(955, 851);
+			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.button2);
@@ -201,5 +215,6 @@ namespace Tester
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.GroupBox groupBox1;
 	}
 }

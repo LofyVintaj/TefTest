@@ -42,6 +42,7 @@ namespace Tester
 				QuestionChoiseAnser object_question = new QuestionChoiseAnser();
 				//object_question.termin_text = richTextBox1.Text;
 				//object_question.termin_value = textBox1.Text;
+				object_question.text = "";
 				object_question.object_buttons = new List<RadioDataQuestion>();
 				db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
 

@@ -64,12 +64,7 @@ namespace Tester
 		private void LabelMouseDoubleClick(object sender, System.EventArgs e)
 		{
 			var label = (Label)sender;
-			label.BackColor = Color.White;
-		}
-		private void voidLabelMouseEnter(object sender, System.EventArgs e)
-		{
-			var label = (Label)sender;
-			label.Cursor = Cursor.;
+			label.BackColor = Color.FromArgb(47, 47, 66);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -78,6 +73,7 @@ namespace Tester
 			string str = richTextBox1.Text;
 			string[] split = str.Split(' ', '!', '\'');
 			int t = 500;
+			int l = 20;
 			foreach (string s in split)
 			{
 				if (s != "")
@@ -86,11 +82,13 @@ namespace Tester
 					t = t + 30;
 					var lb = new Label();
 					lb.Text = s;
+					if (t == 710)
+					{
+						l = l + 30;
+					}
 					lb.Top = t;
-					lb.Left = 20;
-					lb.BackColor = Color.White;
+					lb.Left = l;
 					lb.MouseClick += voidLabelMouseClick;
-					lb.MouseEnter += voidLabelMouseEnter;
 					lb.MouseDoubleClick += LabelMouseDoubleClick;
 					Controls.Add(lb);
 					++i;

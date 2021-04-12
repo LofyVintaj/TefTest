@@ -18,6 +18,7 @@ namespace Tester
 		public string test_name;
 		public int page;
 		public Test test = new Test();
+		public int count_nazh_but2;
 
 		public CustomizeChoiseAnswerQuestion()
 		{
@@ -42,26 +43,48 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-
 			string connectionString = "TestBook";
+			int count_object_gruopBox = 0;
 			MongoCRUD db = new MongoCRUD(connectionString);
 			//db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
-
 			//object_question.object_buttons.Add(but_object);
 
-			var btn = new Button();
+
+			int top_top = 20;
+			var btn = new RadioButton();
 			btn.Text = textBox1.Text;
-			btn.Top = 480;
-			btn.Left = 20;
-			btn.ForeColor = Color.DarkOrchid;
-			btn.FlatAppearance.BorderColor = Color.DarkOrchid;
-			btn.Width = 125;
-			btn.Height = 41;
-			Controls.Add(btn);
+			//btn.Top = 480;
+			//btn.Left = 20;
+			groupBox1.Controls.Add(btn);
+
+			for (int i = 0; i < count_nazh_but2; i++)
+			{
+				top_top += 20;
+			}
+			btn.Top = top_top;
+			btn.Left = 10;
+
+			Console.WriteLine("----");
+			foreach (object i in groupBox1.Controls)
+			{
+				Console.WriteLine(i);
+				count_object_gruopBox += 1;
+			}
+			Console.WriteLine("----");
+			if (count_object_gruopBox == 12)
+			{
+				MessageBox.Show("Вы превысили порог вопросов");
+				object_question.text = richTextBox1.Text;
+				object_question.object_buttons = kk;
+				//object_question.termin_value = textBox1.Text;
+				db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
+				this.Hide();
+			}
 
 			RadioDataQuestion but_object = new RadioDataQuestion();
 			but_object.name = textBox1.Text;
 			kk.Add(but_object);
+			count_nazh_but2 += 1;
 		}
 
 		private void panel2_Paint(object sender, PaintEventArgs e)
