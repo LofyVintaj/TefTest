@@ -57,11 +57,11 @@ namespace Tester
 			btn.FlatAppearance.BorderColor = Color.DarkOrchid;
 			btn.Width = 125;
 			btn.Height = 41;
+			Controls.Add(btn);
 
 			RadioDataQuestion but_object = new RadioDataQuestion();
 			but_object.name = textBox1.Text;
 			kk.Add(but_object);
-			Controls.Add(btn);
 		}
 
 		private void panel2_Paint(object sender, PaintEventArgs e)

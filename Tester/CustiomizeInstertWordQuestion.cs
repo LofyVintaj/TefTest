@@ -54,5 +54,50 @@ namespace Tester
 		{
 			this.Hide();
 		}
+
+		private void voidLabelMouseClick(object sender, System.EventArgs e)
+		{
+			var label = (Label)sender;
+			label.BackColor = Color.Red;
+		}
+
+		private void LabelMouseDoubleClick(object sender, System.EventArgs e)
+		{
+			var label = (Label)sender;
+			label.BackColor = Color.White;
+		}
+		private void voidLabelMouseEnter(object sender, System.EventArgs e)
+		{
+			var label = (Label)sender;
+			label.Cursor = Cursor.;
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			int i = 0;
+			string str = richTextBox1.Text;
+			string[] split = str.Split(' ', '!', '\'');
+			int t = 500;
+			foreach (string s in split)
+			{
+				if (s != "")
+				{
+					Console.WriteLine(s);
+					t = t + 30;
+					var lb = new Label();
+					lb.Text = s;
+					lb.Top = t;
+					lb.Left = 20;
+					lb.BackColor = Color.White;
+					lb.MouseClick += voidLabelMouseClick;
+					lb.MouseEnter += voidLabelMouseEnter;
+					lb.MouseDoubleClick += LabelMouseDoubleClick;
+					Controls.Add(lb);
+					++i;
+				}
+			}
+
+			Console.WriteLine("Всего слов -> {0}", i);
+		}
 	}
 }

@@ -35,6 +35,7 @@ namespace Tester
 			this.button6 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -43,7 +44,7 @@ namespace Tester
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
 			this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-			this.label1.Location = new System.Drawing.Point(23, 126);
+			this.label1.Location = new System.Drawing.Point(23, 110);
 			this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(58, 26);
@@ -54,7 +55,7 @@ namespace Tester
 			// 
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.ForeColor = System.Drawing.Color.Cyan;
-			this.button1.Location = new System.Drawing.Point(832, 487);
+			this.button1.Location = new System.Drawing.Point(832, 753);
 			this.button1.Margin = new System.Windows.Forms.Padding(5);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(125, 41);
@@ -68,7 +69,7 @@ namespace Tester
 			this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
 			this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.richTextBox1.ForeColor = System.Drawing.Color.White;
-			this.richTextBox1.Location = new System.Drawing.Point(27, 163);
+			this.richTextBox1.Location = new System.Drawing.Point(27, 147);
 			this.richTextBox1.Margin = new System.Windows.Forms.Padding(5);
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.Size = new System.Drawing.Size(903, 256);
@@ -109,18 +110,31 @@ namespace Tester
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
 			this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-			this.label2.Location = new System.Drawing.Point(298, 62);
+			this.label2.Location = new System.Drawing.Point(298, 55);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(317, 33);
 			this.label2.TabIndex = 16;
 			this.label2.Text = "Вставить пропуски в текст";
+			// 
+			// button2
+			// 
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.button2.Location = new System.Drawing.Point(27, 411);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(903, 42);
+			this.button2.TabIndex = 17;
+			this.button2.Text = "Конвертировать";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// CustiomizeInstertWordQuestion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-			this.ClientSize = new System.Drawing.Size(971, 542);
+			this.ClientSize = new System.Drawing.Size(971, 808);
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.richTextBox1);
@@ -147,5 +161,6 @@ namespace Tester
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button button2;
 	}
 }
