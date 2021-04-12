@@ -14,6 +14,7 @@ namespace Tester
 	public partial class CustomizeChoiseAnswerQuestion : Form
 	{
 		public QuestionChoiseAnser object_question = new QuestionChoiseAnser();
+		public new List<RadioDataQuestion> kk = new List<RadioDataQuestion>();
 		public string test_name;
 		public int page;
 		public Test test = new Test();
@@ -28,6 +29,7 @@ namespace Tester
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.text = richTextBox1.Text;
+			object_question.object_buttons = kk;
 			//object_question.termin_value = textBox1.Text;
 			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
 			this.Hide();
@@ -45,6 +47,8 @@ namespace Tester
 			MongoCRUD db = new MongoCRUD(connectionString);
 			//db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
 
+			//object_question.object_buttons.Add(but_object);
+
 			var btn = new Button();
 			btn.Text = textBox1.Text;
 			btn.Top = 480;
@@ -53,6 +57,10 @@ namespace Tester
 			btn.FlatAppearance.BorderColor = Color.DarkOrchid;
 			btn.Width = 125;
 			btn.Height = 41;
+
+			RadioDataQuestion but_object = new RadioDataQuestion();
+			but_object.name = textBox1.Text;
+			kk.Add(but_object);
 			Controls.Add(btn);
 		}
 

@@ -30,8 +30,6 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Console.WriteLine("Page");
-			Console.WriteLine(page);
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.termin_text = richTextBox1.Text;
