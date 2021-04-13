@@ -105,28 +105,6 @@ namespace Tester
 		{
 			object_questions[page + 1].Show();
 			object_questions[page].Hide();
-
-			//if (radioButton1.Checked)
-			//{
-			//	CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
-			//	QuestionChoiseAnser object_question = new QuestionChoiseAnser();
-			//	//object_questions.Add(object_question);
-			//	frm.Show();
-			//}
-			//if (radioButton2.Checked)
-			//{
-			//	CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
-			//	//object_questions.Add(object_question);
-			//	frm.Show();
-			//}
-			//if (radioButton3.Checked)
-			//{
-			//	CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
-			//	QuestionInsertWordQuestion object_question = new QuestionInsertWordQuestion();
-			//	//object_questions.Add(object_question);
-			//	frm.Show();
-			//}
-
 		}
 
 		private void button3_Click_1(object sender, EventArgs e)
@@ -153,7 +131,7 @@ namespace Tester
 
 		private void panel2_MouseDown(object sender, MouseEventArgs e)
 		{
-			panel1.Capture = false;
+			panel2.Capture = false;
 			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
 			this.WndProc(ref m);
 		}

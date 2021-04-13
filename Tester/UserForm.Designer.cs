@@ -34,6 +34,7 @@ namespace Tester
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -46,7 +47,7 @@ namespace Tester
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button6.ForeColor = System.Drawing.Color.Crimson;
-			this.button6.Location = new System.Drawing.Point(895, 3);
+			this.button6.Location = new System.Drawing.Point(1210, 3);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(73, 38);
 			this.button6.TabIndex = 9;
@@ -61,7 +62,7 @@ namespace Tester
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(971, 44);
+			this.panel2.Size = new System.Drawing.Size(1286, 44);
 			this.panel2.TabIndex = 14;
 			this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
 			// 
@@ -70,7 +71,7 @@ namespace Tester
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
 			this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-			this.label1.Location = new System.Drawing.Point(30, 74);
+			this.label1.Location = new System.Drawing.Point(42, 73);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(178, 33);
 			this.label1.TabIndex = 15;
@@ -81,7 +82,7 @@ namespace Tester
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
 			this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-			this.label2.Location = new System.Drawing.Point(602, 74);
+			this.label2.Location = new System.Drawing.Point(706, 73);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(179, 33);
 			this.label2.TabIndex = 16;
@@ -93,7 +94,7 @@ namespace Tester
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.button2.Location = new System.Drawing.Point(832, 528);
+			this.button2.Location = new System.Drawing.Point(1137, 528);
 			this.button2.Margin = new System.Windows.Forms.Padding(5);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(125, 41);
@@ -101,12 +102,27 @@ namespace Tester
 			this.button2.Text = "Выбрать";
 			this.button2.UseVisualStyleBackColor = true;
 			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
+			this.tableLayoutPanel1.ColumnCount = 2;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(48, 126);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 2;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(655, 377);
+			this.tableLayoutPanel1.TabIndex = 18;
+			// 
 			// UserForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-			this.ClientSize = new System.Drawing.Size(971, 583);
+			this.ClientSize = new System.Drawing.Size(1286, 583);
+			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -117,6 +133,7 @@ namespace Tester
 			this.Name = "UserForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "UserForm";
+			this.Load += new System.EventHandler(this.UserForm_Load);
 			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -130,5 +147,6 @@ namespace Tester
 		private System.Windows.Forms.Label label1;
 		public System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 	}
 }

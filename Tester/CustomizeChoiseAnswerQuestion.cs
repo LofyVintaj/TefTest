@@ -14,7 +14,7 @@ namespace Tester
 	public partial class CustomizeChoiseAnswerQuestion : Form
 	{
 		public QuestionChoiseAnser object_question = new QuestionChoiseAnser();
-		public new List<RadioDataQuestion> kk = new List<RadioDataQuestion>();
+		public List<RadioDataQuestion> kk = new List<RadioDataQuestion>();
 		public string test_name;
 		public int page;
 		public Test test = new Test();
@@ -32,12 +32,12 @@ namespace Tester
 			object_question.text = richTextBox1.Text;
 			object_question.object_buttons = kk;
 
-			foreach (RadioButton i in groupBox1.Controls)
+			foreach (RadioButton i in flowLayoutPanel1.Controls)
 			{
 				Console.WriteLine(i);
 				if (i.Checked == true)
 				{
-					MessageBox.Show(i.Text);
+					MessageBox.Show(i.Text);	
 				}
 			}
 
@@ -66,7 +66,7 @@ namespace Tester
 			btn.Text = textBox1.Text;
 			//btn.Top = 480;
 			//btn.Left = 20;
-			groupBox1.Controls.Add(btn);
+			flowLayoutPanel1.Controls.Add(btn);
 
 			for (int i = 0; i < count_nazh_but2; i++)
 			{
@@ -76,21 +76,12 @@ namespace Tester
 			btn.Left = 10;
 
 			Console.WriteLine("----");
-			foreach (object i in groupBox1.Controls)
+			foreach (object i in flowLayoutPanel1.Controls)
 			{
 				Console.WriteLine(i);
 				count_object_gruopBox += 1;
 			}
 			Console.WriteLine("----");
-			if (count_object_gruopBox == 12)
-			{
-				MessageBox.Show("Вы превысили порог вопросов");
-				object_question.text = richTextBox1.Text;
-				object_question.object_buttons = kk;
-				//object_question.termin_value = textBox1.Text;
-				db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
-				this.Hide();
-			}
 
 			RadioDataQuestion but_object = new RadioDataQuestion();
 			but_object.name = textBox1.Text;

@@ -7,6 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Bson;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Driver;
 
 namespace Tester
 {
@@ -27,6 +33,15 @@ namespace Tester
 			panel2.Capture = false;
 			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
 			this.WndProc(ref m);
+		}
+
+		private void UserForm_Load(object sender, EventArgs e)
+		{
+			string connectionString = "TestBook";
+			MongoCRUD db = new MongoCRUD(connectionString);
+			var list_tests = db.ListTests<Test>("Test");
+
+
 		}
 	}
 }
