@@ -36,6 +36,7 @@ namespace Tester
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
+			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -128,12 +129,20 @@ namespace Tester
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
+			// flowLayoutPanel1
+			// 
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 470);
+			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(903, 275);
+			this.flowLayoutPanel1.TabIndex = 18;
+			// 
 			// CustiomizeInstertWordQuestion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(971, 808);
+			this.Controls.Add(this.flowLayoutPanel1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.panel2);
@@ -162,5 +171,6 @@ namespace Tester
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 	}
 }

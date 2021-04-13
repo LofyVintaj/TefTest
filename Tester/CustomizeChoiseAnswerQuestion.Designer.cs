@@ -165,6 +165,7 @@ namespace Tester
 			// groupBox1
 			// 
 			this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
+			this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
 			this.groupBox1.Location = new System.Drawing.Point(23, 458);

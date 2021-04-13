@@ -58,7 +58,7 @@ namespace Tester
 		private void voidLabelMouseClick(object sender, System.EventArgs e)
 		{
 			var label = (Label)sender;
-			label.BackColor = Color.Red;
+			label.BackColor = Color.White;
 		}
 
 		private void LabelMouseDoubleClick(object sender, System.EventArgs e)
@@ -88,9 +88,11 @@ namespace Tester
 					}
 					lb.Top = t;
 					lb.Left = l;
+					lb.ForeColor = Color.CornflowerBlue;
 					lb.MouseClick += voidLabelMouseClick;
 					lb.MouseDoubleClick += LabelMouseDoubleClick;
-					Controls.Add(lb);
+					flowLayoutPanel1.Controls.Add(lb);
+					// Controls.Add(lb);
 					++i;
 				}
 			}
