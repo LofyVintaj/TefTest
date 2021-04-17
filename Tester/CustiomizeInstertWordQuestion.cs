@@ -29,7 +29,7 @@ namespace Tester
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.text = richTextBox1.Text;
 			//object_question.termin_value = textBox1.Text;
-			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
+			db.UpdateQuestionsInstertWordQuestionRecord("Test", test_name, object_question, page);
 			this.Hide();
 		}
 

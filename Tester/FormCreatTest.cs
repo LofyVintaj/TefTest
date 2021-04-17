@@ -65,8 +65,7 @@ namespace Tester
             db.InsertRecord("Test", new Test
             {
                 name = test_name,
-                count_question = count_question,
-                questions = new object[count_question]
+                count_question = count_question
             });
 
 			object_questions[count_question - 1].test_name = test_name;

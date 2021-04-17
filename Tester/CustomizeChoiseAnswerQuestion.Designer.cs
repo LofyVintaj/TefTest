@@ -170,6 +170,7 @@ namespace Tester
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
 			this.flowLayoutPanel1.Size = new System.Drawing.Size(908, 293);
 			this.flowLayoutPanel1.TabIndex = 22;
+			this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
 			// 
 			// CustomizeChoiseAnswerQuestion
 			// 

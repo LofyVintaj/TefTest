@@ -39,8 +39,20 @@ namespace Tester
 		{
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
-			var list_tests = db.ListTests<Test>("Test");
+			List<Test> list_tests = db.ListTests<Test>("Test");
+			foreach (Test s in list_tests)
+			{
+				Label label_element = new Label();
+				label_element.Text = s.name;
+				label_element.ForeColor = Color.White;
+				tableLayoutPanel1.Controls.Add(label_element);
+			}
 
+
+		}
+
+		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+		{
 
 		}
 	}

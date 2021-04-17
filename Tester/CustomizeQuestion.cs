@@ -35,19 +35,8 @@ namespace Tester
 			{
 				CustomizeChoiseAnswerQuestion frm = new CustomizeChoiseAnswerQuestion();
 				frm.test_name = test_name;
-				frm.page = page;
-
-				string connectionString = "TestBook";
-				MongoCRUD db = new MongoCRUD(connectionString);
-				QuestionChoiseAnser object_question = new QuestionChoiseAnser();
-				//object_question.termin_text = richTextBox1.Text;
-				//object_question.termin_value = textBox1.Text;
-				object_question.text = "";
-				object_question.object_buttons = new List<RadioDataQuestion>();
-				db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
-
+				frm.page = page;	
 				frm.Show();
-				//db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
 
 			}
 			if (radioButton2.Checked)
@@ -55,14 +44,6 @@ namespace Tester
 				CustomizeTerminQuestion frm = new CustomizeTerminQuestion();
 				frm.test_name = test_name;
 				frm.page = page;
-
-				string connectionString = "TestBook";
-				MongoCRUD db = new MongoCRUD(connectionString);
-				QuestionTermin object_question = new QuestionTermin();
-				//object_question.termin_text = richTextBox1.Text;
-				//object_question.termin_value = textBox1.Text;
-				db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
-
 				frm.Show();
 
 			}
@@ -71,14 +52,6 @@ namespace Tester
 				CustiomizeInstertWordQuestion frm = new CustiomizeInstertWordQuestion();
 				frm.test_name = test_name;
 				frm.page = page;
-
-				string connectionString = "TestBook";
-				MongoCRUD db = new MongoCRUD(connectionString);
-				QuestionInsertWordQuestion object_question = new QuestionInsertWordQuestion();
-				//object_question.termin_text = richTextBox1.Text;
-				//object_question.termin_value = textBox1.Text;
-				db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
-
 				frm.Show();
 			}
 		}

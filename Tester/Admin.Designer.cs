@@ -32,6 +32,7 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.button2 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -41,7 +42,7 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.button1.Location = new System.Drawing.Point(222, 203);
+			this.button1.Location = new System.Drawing.Point(220, 153);
 			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(180, 53);
@@ -94,12 +95,25 @@
 			this.button2.Text = "X";
 			this.button2.UseVisualStyleBackColor = false;
 			// 
+			// button5
+			// 
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
+			this.button5.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.button5.Location = new System.Drawing.Point(188, 222);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(242, 51);
+			this.button5.TabIndex = 13;
+			this.button5.Text = "Проверить работы";
+			this.button5.UseVisualStyleBackColor = true;
+			// 
 			// Admin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(662, 435);
+			this.Controls.Add(this.button5);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.button1);
 			this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -119,5 +133,6 @@
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button5;
 	}
 }

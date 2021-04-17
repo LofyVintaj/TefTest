@@ -43,7 +43,7 @@ namespace Tester
 
 
 			//object_question.termin_value = textBox1.Text;
-			db.UpdateQuestionsRecord<Test>("Test", test_name, object_question, page);
+			db.UpdateQuestionsChoiseAnswerRecord("Test", test_name, object_question, page);
 			this.Hide();
 		}
 
@@ -104,6 +104,11 @@ namespace Tester
 		private void button6_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+		}
+
+		private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }
