@@ -99,5 +99,10 @@ namespace Tester
 
 			Console.WriteLine("Всего слов -> {0}", i);
 		}
+
+		private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
 	}
 }

@@ -122,26 +122,17 @@ namespace Tester
                 Console.WriteLine(doc.name);
 			}
             return documents;
-			//foreach (var p in documents)
-			//{
-			//	Console.WriteLine(p);
-			//	Console.WriteLine(p.GetType());
-			//	var myObj = BsonSerializer.Deserialize<Test>(p);
-			//	Console.WriteLine(myObj);
-			//}
-
 		}
 
-        //      public object SearchRecord<T>(string table, string name)
-        //      {
-        //          var collection = db.GetCollection<Test>(table);
 
-        //          var filter = Builders<BsonDocument>.Filter.Eq("name", name);
-
-        //          var doc = collection.Find(filter).FirstOrDefault();
-        //	Console.WriteLine(doc.ToString());
-        //	return doc;
-        //}
+        // 
+        public Test SearchTest<T>(string collectionName, string test_name)
+        {
+            var collection = db.GetCollection<Test>(collectionName);
+            var filter = Builders<Test>.Filter.Eq("name", test_name);
+            var document = collection.Find(filter).FirstOrDefault();
+            return document;
+        }
 
         // Обонвление тестов ( Добавление обеьктов вопроса в них) 
         async public void UpdateQuestionsTerminRecord(string table, string name, QuestionTermin question, int page)
