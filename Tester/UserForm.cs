@@ -50,6 +50,57 @@ namespace Tester
 			var label = (Label)sender;
 			label.BackColor = Color.FromArgb(69, 69, 97);
 			var test = db.SearchTest<Test>("Test", label.Text);
+			var question_termin = test.questions_termin;
+			var question_choise_answer = test.questions_choise_answer;
+			var question_insert_word = test.questions_insert_word;
+			List<object> list_question = new List<object>();
+
+			TestQuestion[] test_question_user = new TestQuestion[test.count_question];
+			Object[] tests_question_user = new Object[test.count_question];
+
+			foreach(var i in question_termin)
+			{
+				list_question.Add(i);
+			}
+			foreach (var i in question_choise_answer)
+			{
+				list_question.Add(i);
+			}
+			foreach (var i in question_insert_word)
+			{
+				list_question.Add(i);
+			}
+			Console.WriteLine("------------");
+			
+			foreach (var question_item in list_question)
+			{
+				Console.WriteLine(question_item.ToJson());
+				list_question.IndexOf(question_item); 
+
+				if (question_item.GetType() == typeof(Tester.QuestionChoiseAnser) )
+				{
+					Console.WriteLine("QuestionChoiseAnser");
+					tests_question_user[list_question.IndexOf(question_item)] = new TestChoiseAnswerQuestion();
+				}
+				else if (question_item.GetType() == typeof(Tester.QuestionTermin))
+				{
+					Console.WriteLine("QuestionTermin");
+					tests_question_user[list_question.IndexOf(question_item)] = new TestTerminQuestion();
+				}
+				else if (question_item.GetType() == typeof(Tester.CustiomizeInstertWordQuestion))
+				{
+					Console.WriteLine("CustiomizeInstertWordQuestion");
+					tests_question_user[list_question.IndexOf(question_item)] = new TestInsertWordQuestion();
+				}
+			}
+			Console.WriteLine("------------");
+
+			//for(int i = 0; i < test.count_question; i++)
+			//{
+			//	test_question_user[i] = new TestQuestion();
+			//	test_question_user[i].Show();
+			//}
+
 			Console.WriteLine(test.ToJson());
 		}
 
@@ -66,14 +117,12 @@ namespace Tester
 				label_element.Text = s.name;
 				label_element.ForeColor = Color.White;
 				label_element.Font = new Font(label1.Font.Name, Convert.ToSingle(20), label1.Font.Style);
-				label_element.Width = 500;
+				label_element.Width = 800;
 				label_element.Height = 50;
 				label_element.MouseClick += voidLabelMouseClick;
 				label_element.MouseDoubleClick += LabelMouseDoubleClick;
 				tableLayoutPanel1.Controls.Add(label_element);
 			}
-
-
 		}
 
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

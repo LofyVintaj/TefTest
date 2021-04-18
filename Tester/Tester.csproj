@@ -168,6 +168,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestChoiseAnswerQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestChoiseAnswerQuestion.Designer.cs">
+      <DependentUpon>TestChoiseAnswerQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestInsertWordQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestInsertWordQuestion.Designer.cs">
+      <DependentUpon>TestInsertWordQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestQuestion.Designer.cs">
+      <DependentUpon>TestQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestTerminQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTerminQuestion.Designer.cs">
+      <DependentUpon>TestTerminQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +235,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TestQuestion.resx">
+      <DependentUpon>TestQuestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>

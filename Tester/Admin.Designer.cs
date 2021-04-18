@@ -42,7 +42,7 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.button1.Location = new System.Drawing.Point(220, 153);
+			this.button1.Location = new System.Drawing.Point(219, 167);
 			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(180, 53);
@@ -100,7 +100,7 @@
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
 			this.button5.ForeColor = System.Drawing.Color.CornflowerBlue;
-			this.button5.Location = new System.Drawing.Point(188, 222);
+			this.button5.Location = new System.Drawing.Point(186, 243);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(242, 51);
 			this.button5.TabIndex = 13;
