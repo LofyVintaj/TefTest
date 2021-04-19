@@ -80,26 +80,23 @@ namespace Tester
 				if (question_item.GetType() == typeof(Tester.QuestionChoiseAnser) )
 				{
 					Console.WriteLine("QuestionChoiseAnser");
-					tests_question_user[list_question.IndexOf(question_item)] = new TestChoiseAnswerQuestion();
 				}
 				else if (question_item.GetType() == typeof(Tester.QuestionTermin))
 				{
 					Console.WriteLine("QuestionTermin");
-					tests_question_user[list_question.IndexOf(question_item)] = new TestTerminQuestion();
 				}
 				else if (question_item.GetType() == typeof(Tester.CustiomizeInstertWordQuestion))
 				{
 					Console.WriteLine("CustiomizeInstertWordQuestion");
-					tests_question_user[list_question.IndexOf(question_item)] = new TestInsertWordQuestion();
 				}
 			}
 			Console.WriteLine("------------");
 
-			//for(int i = 0; i < test.count_question; i++)
-			//{
-			//	test_question_user[i] = new TestQuestion();
-			//	test_question_user[i].Show();
-			//}
+			for (int i = 0; i < test.count_question; i++)
+			{
+				test_question_user[i] = new TestQuestion();
+				test_question_user[i].Show();
+			}
 
 			Console.WriteLine(test.ToJson());
 		}
