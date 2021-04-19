@@ -17,12 +17,12 @@ namespace Tester
 		public int test_count_question;
 		public int page;
 
-		public QuestionTermin questin_termin = new QuestionTermin();
-		public QuestionChoiseAnser questin_choise_answer = new QuestionChoiseAnser();
-		public QuestionInsertWordQuestion questin_insert_word = new QuestionInsertWordQuestion();
-		public bool bool_questin_termin = false;
-		public bool bool_questin_choise_answer = false;
-		public bool bool_questin_insert_word = false;
+		public QuestionTermin question_termin = new QuestionTermin();
+		public QuestionChoiseAnser question_choise_answer = new QuestionChoiseAnser();
+		public QuestionInsertWordQuestion question_insert_word = new QuestionInsertWordQuestion();
+		public bool bool_question_termin = false;
+		public bool bool_question_choise_answer = false;
+		public bool bool_question_insert_word = false;
 		public TestQuestion()
 		{
 			InitializeComponent();
@@ -42,18 +42,28 @@ namespace Tester
 				button2.Visible = false;
 			}
 
-			//if ( bool_questin_termin == true)
-			//{
-			//	Console.WriteLine("1");
-			//}
-			//else if (bool_questin_choise_answer == true)
-			//{
-			//	Console.WriteLine("2");
-			//}
-			//else if (bool_questin_insert_word == true)
-			//{
-			//	Console.WriteLine("3");
-			//}
+			if (bool_question_termin == true)
+			{
+				Console.WriteLine("bool_questin_termin 1");
+				Label rich_box = new Label();
+				TextBox text_box = new TextBox();
+
+				Console.WriteLine("---------0000---------");
+				Console.WriteLine(question_termin.termin_text);
+				Console.WriteLine("---------0000---------");
+
+			}
+			else if (bool_question_choise_answer == true)
+			{
+				Console.WriteLine("bool_questin_choise_answer 2");
+				TableLayoutPanel button_box = new TableLayoutPanel();
+			}
+			else if (bool_question_insert_word == true)
+			{
+				Console.WriteLine("bool_questin_insert_word 3");
+				// Сделать цикл из label закидывать в grawLayout и там где должно быть пустое место, будет textBox 
+				FlowLayoutPanel button_box = new FlowLayoutPanel();
+			}
 
 		}
 

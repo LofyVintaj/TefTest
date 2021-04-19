@@ -72,25 +72,6 @@ namespace Tester
 			}
 			Console.WriteLine("------------");
 
-
-			foreach (var question_item in list_question)
-			{
-				Console.WriteLine(question_item.ToJson());
-				list_question.IndexOf(question_item); 
-
-				if (question_item.GetType() == typeof(Tester.QuestionChoiseAnser) )
-				{
-					Console.WriteLine("QuestionChoiseAnser");
-				}
-				else if (question_item.GetType() == typeof(Tester.QuestionTermin))
-				{
-					Console.WriteLine("QuestionTermin");
-				}
-				else if (question_item.GetType() == typeof(Tester.CustiomizeInstertWordQuestion))
-				{
-					Console.WriteLine("CustiomizeInstertWordQuestion");
-				}
-			}
 			Console.WriteLine("------------");
 
 
@@ -105,6 +86,36 @@ namespace Tester
 				test_question_user[i].Text = Convert.ToString(i);
 				test_question_user[i].test_object_questions = test_question_user;
 				test_question_user[i].test_count_question = test.count_question;
+
+				foreach (var question_item in list_question)
+				{
+					Console.WriteLine(question_item.ToJson());
+					list_question.IndexOf(question_item);
+
+					if (question_item.GetType() == typeof(Tester.QuestionChoiseAnser))
+					{
+						Console.WriteLine("QuestionChoiseAnser");
+						test_question_user[i].bool_question_choise_answer = true;
+						QuestionChoiseAnser question = (QuestionChoiseAnser)question_item;
+						test_question_user[i].question_choise_answer = question;
+					}
+					else if (question_item.GetType() == typeof(Tester.QuestionTermin))
+					{
+						Console.WriteLine("QuestionTermin");
+						test_question_user[i].bool_question_termin = true;
+						QuestionTermin question = (QuestionTermin)question_item;
+						test_question_user[i].question_termin = question;
+					}
+					else if (question_item.GetType() == typeof(Tester.CustiomizeInstertWordQuestion))
+					{
+						Console.WriteLine("CustiomizeInstertWordQuestion");
+						test_question_user[i].bool_question_insert_word = true;
+						QuestionInsertWordQuestion question = (QuestionInsertWordQuestion)question_item;
+						test_question_user[i].question_insert_word = question;
+					}
+				}
+
+
 				test_question_user[0].Show();
 			}
 
