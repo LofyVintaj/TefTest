@@ -156,6 +156,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "Form1";
+			this.Opacity = 0.95D;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "e";
 			this.Load += new System.EventHandler(this.Form1_Load);

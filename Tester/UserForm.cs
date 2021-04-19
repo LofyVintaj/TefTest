@@ -55,7 +55,7 @@ namespace Tester
 			var question_insert_word = test.questions_insert_word;
 			List<object> list_question = new List<object>();
 
-			TestQuestion[] test_question_user = new TestQuestion[test.count_question];
+			List<TestQuestion> test_question_user = new List<TestQuestion>();
 			Object[] tests_question_user = new Object[test.count_question];
 
 			foreach(var i in question_termin)
@@ -71,7 +71,8 @@ namespace Tester
 				list_question.Add(i);
 			}
 			Console.WriteLine("------------");
-			
+
+
 			foreach (var question_item in list_question)
 			{
 				Console.WriteLine(question_item.ToJson());
@@ -92,11 +93,22 @@ namespace Tester
 			}
 			Console.WriteLine("------------");
 
+
+
 			for (int i = 0; i < test.count_question; i++)
 			{
-				test_question_user[i] = new TestQuestion();
-				test_question_user[i].Show();
+				test_question_user.Add(new TestQuestion());
 			}
+
+			for (int i = 0; i < test.count_question; i++)
+			{
+				test_question_user[i].Text = Convert.ToString(i);
+				test_question_user[i].test_object_questions = test_question_user;
+				test_question_user[i].test_count_question = test.count_question;
+				test_question_user[0].Show();
+			}
+
+			
 
 			Console.WriteLine(test.ToJson());
 		}

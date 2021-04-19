@@ -21,7 +21,7 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-                    int count_question;
+            int count_question;
             string test_name;
             Test test = new Test();
             if (textBox1.Text == "0")

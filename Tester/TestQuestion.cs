@@ -12,6 +12,11 @@ namespace Tester
 {
 	public partial class TestQuestion : Form
 	{
+		//Наш список вопросов
+		public List<TestQuestion> test_object_questions = new List<TestQuestion>();
+		public int test_count_question;
+		public int page;
+
 		public QuestionTermin questin_termin = new QuestionTermin();
 		public QuestionChoiseAnser questin_choise_answer = new QuestionChoiseAnser();
 		public QuestionInsertWordQuestion questin_insert_word = new QuestionInsertWordQuestion();
@@ -24,17 +29,58 @@ namespace Tester
 		}
 		public void TestQuestion_Load(object sender, EventArgs e)
 		{
-			if ( bool_questin_termin == true)
+			//label2.Text = Convert.ToString(page);
+			page = int.Parse(this.Text);
+			label2.Text = Convert.ToString(page);
+
+			if (this.Text == "0")
 			{
-				Console.WriteLine("1");
+				button3.Visible = false;
 			}
-			else if (bool_questin_choise_answer == true)
+			else if (page == test_count_question - 1)
 			{
-				Console.WriteLine("2");
+				button2.Visible = false;
 			}
-			else if (bool_questin_insert_word == true)
+
+			//if ( bool_questin_termin == true)
+			//{
+			//	Console.WriteLine("1");
+			//}
+			//else if (bool_questin_choise_answer == true)
+			//{
+			//	Console.WriteLine("2");
+			//}
+			//else if (bool_questin_insert_word == true)
+			//{
+			//	Console.WriteLine("3");
+			//}
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
+
+		private void panel1_MouseDown(object sender, MouseEventArgs e)
+		{
+			panel1.Capture = false;
+			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+			this.WndProc(ref m);
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			test_object_questions[page + 1].Show();
+			test_object_questions[page].Hide();
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			test_object_questions[page - 1].Show();
+			if (page != test_count_question - 1)
 			{
-				Console.WriteLine("3");
+				test_object_questions[page].Hide();
 			}
 		}
 	}
