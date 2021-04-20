@@ -29,7 +29,17 @@ namespace Tester
 		}
 		public void TestQuestion_Load(object sender, EventArgs e)
 		{
-			//label2.Text = Convert.ToString(page);
+
+			Console.WriteLine("LOADLOAD");
+			Console.WriteLine("LOADLOAD");
+			Console.WriteLine("LOADLOAD");
+			Console.WriteLine(bool_question_termin);
+			Console.WriteLine(bool_question_choise_answer);
+			Console.WriteLine(bool_question_insert_word);
+			Console.WriteLine("LOADLOAD");
+			Console.WriteLine("LOADLOAD");
+			Console.WriteLine("LOADLOAD");
+			Console.WriteLine("LOADLOAD");
 			page = int.Parse(this.Text);
 			label2.Text = Convert.ToString(page);
 
@@ -42,27 +52,91 @@ namespace Tester
 				button2.Visible = false;
 			}
 
+			// Проверяет какой вопрос true такие данные и будет заполнять
 			if (bool_question_termin == true)
 			{
+				tableLayoutPanel1.Controls.Clear();
+
 				Console.WriteLine("bool_questin_termin 1");
 				Label rich_box = new Label();
 				TextBox text_box = new TextBox();
 
-				Console.WriteLine("---------0000---------");
-				Console.WriteLine(question_termin.termin_text);
-				Console.WriteLine("---------0000---------");
+				rich_box.Location = new Point(50, 450);
+				rich_box.Width = 500;
+				rich_box.Height = 250;
+				rich_box.BackColor = Color.FromArgb(69, 69, 97);
+				rich_box.Text = question_termin.termin_text;
+				tableLayoutPanel1.Controls.Add(rich_box);
+				//Controls.Add(rich_box);
+
+
+				text_box.Location = new Point(250, 25);
+				text_box.AutoSize = false;
+				text_box.Width = 350;
+				text_box.BackColor = Color.FromArgb(69, 69, 97);
+				text_box.ForeColor = Color.White;
+				text_box.BorderStyle = BorderStyle.None;
+				tableLayoutPanel1.Controls.Add(text_box);
 
 			}
 			else if (bool_question_choise_answer == true)
 			{
+
 				Console.WriteLine("bool_questin_choise_answer 2");
 				TableLayoutPanel button_box = new TableLayoutPanel();
+
+				button_box.Location = new Point(50, 50);
+				button_box.Width = 150;
+				button_box.BackColor = Color.FromArgb(69, 69, 97);
+				button_box.ForeColor = Color.White;
+
+				foreach(var i in question_choise_answer.object_buttons)
+				{
+					RadioButton but = new RadioButton();
+					but.Text = i.name;
+					button_box.Controls.Add(but);
+				}
+				
+
+				tableLayoutPanel1.Controls.Add(button_box);
 			}
 			else if (bool_question_insert_word == true)
 			{
+				tableLayoutPanel1.Controls.Clear();
+
 				Console.WriteLine("bool_questin_insert_word 3");
 				// Сделать цикл из label закидывать в grawLayout и там где должно быть пустое место, будет textBox 
 				FlowLayoutPanel button_box = new FlowLayoutPanel();
+				//foreach (var i in question_insert_word.text)
+
+				int i = 0;
+				string str = question_insert_word.text;
+				string[] split = str.Split(' ', '!', '\'');
+				int t = 500;
+				int l = 20;
+				foreach (string s in split)
+				{
+					if (s != "")
+					{
+						Console.WriteLine(s);
+						t = t + 30;
+						var lb = new Label();
+						lb.Text = s;
+						if (t == 710)
+						{
+							l = l + 30;
+						}
+						lb.Top = t;
+						lb.Left = l;
+						lb.ForeColor = Color.CornflowerBlue;
+						button_box.Controls.Add(lb);
+						// Controls.Add(lb);
+						++i;
+					}
+				}
+
+				tableLayoutPanel1.Controls.Add(button_box);
+
 			}
 
 		}
@@ -81,12 +155,14 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			tableLayoutPanel1.Controls.Clear();
 			test_object_questions[page + 1].Show();
 			test_object_questions[page].Hide();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
+			tableLayoutPanel1.Controls.Clear();
 			test_object_questions[page - 1].Show();
 			if (page != test_count_question - 1)
 			{

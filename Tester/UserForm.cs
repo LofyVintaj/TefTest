@@ -95,6 +95,8 @@ namespace Tester
 					if (question_item.GetType() == typeof(Tester.QuestionChoiseAnser))
 					{
 						Console.WriteLine("QuestionChoiseAnser");
+						test_question_user[i].bool_question_insert_word = false;
+						test_question_user[i].bool_question_termin = false;
 						test_question_user[i].bool_question_choise_answer = true;
 						QuestionChoiseAnser question = (QuestionChoiseAnser)question_item;
 						test_question_user[i].question_choise_answer = question;
@@ -103,6 +105,8 @@ namespace Tester
 					{
 						Console.WriteLine("QuestionTermin");
 						test_question_user[i].bool_question_termin = true;
+						test_question_user[i].bool_question_insert_word = false;
+						test_question_user[i].bool_question_choise_answer = false;
 						QuestionTermin question = (QuestionTermin)question_item;
 						test_question_user[i].question_termin = question;
 					}
@@ -110,6 +114,8 @@ namespace Tester
 					{
 						Console.WriteLine("CustiomizeInstertWordQuestion");
 						test_question_user[i].bool_question_insert_word = true;
+						test_question_user[i].bool_question_termin = false;
+						test_question_user[i].bool_question_choise_answer = false;
 						QuestionInsertWordQuestion question = (QuestionInsertWordQuestion)question_item;
 						test_question_user[i].question_insert_word = question;
 					}

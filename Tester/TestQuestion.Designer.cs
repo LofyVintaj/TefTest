@@ -33,8 +33,8 @@ namespace Tester
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -94,24 +94,28 @@ namespace Tester
 			this.panel1.TabIndex = 9;
 			this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
 			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(282, 105);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(59, 23);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "label1";
-			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.ForeColor = System.Drawing.Color.Coral;
-			this.label2.Location = new System.Drawing.Point(282, 154);
+			this.label2.Location = new System.Drawing.Point(420, 496);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(119, 23);
 			this.label2.TabIndex = 10;
 			this.label2.Text = "Fdksof[dsafsd";
+			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 2;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 64);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 2;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(943, 340);
+			this.tableLayoutPanel1.TabIndex = 11;
 			// 
 			// TestQuestion
 			// 
@@ -119,7 +123,7 @@ namespace Tester
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(971, 542);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.button2);
@@ -143,7 +147,7 @@ namespace Tester
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 	}
 }
