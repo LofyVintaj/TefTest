@@ -121,7 +121,7 @@ namespace Tester
 				TableLayoutPanel button_box = new TableLayoutPanel();
 
 				button_box.Location = new Point(50, 50);
-				button_box.Width = 150;
+				button_box.Width = 1000;
 				button_box.BackColor = Color.FromArgb(69, 69, 97);
 				button_box.ForeColor = Color.White;
 
@@ -137,21 +137,11 @@ namespace Tester
 			}
 			else if (bool_question_insert_word == true)
 			{
-				Console.WriteLine("INSERT_WORD3");
-				Console.WriteLine("INSERT_WORD3");
-				Console.WriteLine("INSERT_WORD3");
-				Console.WriteLine("INSERT_WORD3");
 				Console.WriteLine("bool_questin_insert_word 3 ----");
-				Console.WriteLine(question_insert_word.text);
 				// Сделать цикл из label закидывать в grawLayout и там где должно быть пустое место, будет textBox 
 				FlowLayoutPanel button_box = new FlowLayoutPanel();
-				Label lbl = new Label();
-				lbl.Top = 55;
-				lbl.Left = 55;
-				lbl.Text = question_insert_word.text;
-				lbl.Text = " fdsafdasfasdf ";
 				//foreach (var i in question_insert_word.text)
-
+				button_box.Width = 1000;
 				int i = 0;
 				string str = question_insert_word.text;
 				string[] split = str.Split(' ', '!', '\'');
@@ -183,7 +173,6 @@ namespace Tester
 
 				tableLayoutPanel1.Controls.Add(button_box);
 				Controls.Add(tableLayoutPanel1);
-				Controls.Add(lbl);
 
 			}
 
