@@ -34,7 +34,7 @@ namespace Tester
                        MessageBoxDefaultButton.Button1,
                        MessageBoxOptions.DefaultDesktopOnly);
                 this.Show();
-            }
+            } 
             count_question = Int32.Parse(textBox1.Text);
             test_name = textBox2.Text;
 

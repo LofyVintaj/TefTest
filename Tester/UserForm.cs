@@ -70,10 +70,6 @@ namespace Tester
 			{
 				list_question.Add(i);
 			}
-			Console.WriteLine("------------");
-
-			Console.WriteLine("------------");
-
 
 
 			for (int i = 0; i < test.count_question; i++)
@@ -86,42 +82,43 @@ namespace Tester
 				test_question_user[i].Text = Convert.ToString(i);
 				test_question_user[i].test_object_questions = test_question_user;
 				test_question_user[i].test_count_question = test.count_question;
+				Console.WriteLine(list_question.ToJson());
+				list_question.IndexOf(list_question[i]);
 
-				foreach (var question_item in list_question)
+
+				Console.WriteLine("====================");
+				Console.WriteLine(list_question[i].GetType());
+				Console.WriteLine(list_question[i].GetType() == typeof(CustiomizeInstertWordQuestion));
+				Console.WriteLine(list_question[i].GetType() == typeof(Tester.QuestionInsertWordQuestion));
+				Console.WriteLine("====================");
+
+				if (list_question[i].GetType() == typeof(QuestionChoiseAnser))
 				{
-					Console.WriteLine(question_item.ToJson());
-					list_question.IndexOf(question_item);
-
-					if (question_item.GetType() == typeof(Tester.QuestionChoiseAnser))
-					{
-						Console.WriteLine("QuestionChoiseAnser");
-						test_question_user[i].bool_question_insert_word = false;
-						test_question_user[i].bool_question_termin = false;
-						test_question_user[i].bool_question_choise_answer = true;
-						QuestionChoiseAnser question = (QuestionChoiseAnser)question_item;
-						test_question_user[i].question_choise_answer = question;
-					}
-					else if (question_item.GetType() == typeof(Tester.QuestionTermin))
-					{
-						Console.WriteLine("QuestionTermin");
-						test_question_user[i].bool_question_termin = true;
-						test_question_user[i].bool_question_insert_word = false;
-						test_question_user[i].bool_question_choise_answer = false;
-						QuestionTermin question = (QuestionTermin)question_item;
-						test_question_user[i].question_termin = question;
-					}
-					else if (question_item.GetType() == typeof(Tester.CustiomizeInstertWordQuestion))
-					{
-						Console.WriteLine("CustiomizeInstertWordQuestion");
-						test_question_user[i].bool_question_insert_word = true;
-						test_question_user[i].bool_question_termin = false;
-						test_question_user[i].bool_question_choise_answer = false;
-						QuestionInsertWordQuestion question = (QuestionInsertWordQuestion)question_item;
-						test_question_user[i].question_insert_word = question;
-					}
+					Console.WriteLine("QuestionChoiseAnser");
+					test_question_user[i].bool_question_insert_word = false;
+					test_question_user[i].bool_question_termin = false;
+					test_question_user[i].bool_question_choise_answer = true;
+					QuestionChoiseAnser question = (QuestionChoiseAnser)list_question[i];
+					test_question_user[i].question_choise_answer = question;
 				}
-
-
+				else if (list_question[i].GetType() == typeof(QuestionTermin))
+				{
+					Console.WriteLine("QuestionTermin");
+					test_question_user[i].bool_question_termin = true;
+					test_question_user[i].bool_question_insert_word = false;
+					test_question_user[i].bool_question_choise_answer = false;
+					QuestionTermin question = (QuestionTermin)list_question[i];
+					test_question_user[i].question_termin = question;
+				}
+				else if (list_question[i].GetType() == typeof(Tester.QuestionInsertWordQuestion))
+				{
+					Console.WriteLine("CustiomizeInstertWordQuestion");
+					test_question_user[i].bool_question_insert_word = true;
+					test_question_user[i].bool_question_termin = false;
+					test_question_user[i].bool_question_choise_answer = false;
+					QuestionInsertWordQuestion question = (QuestionInsertWordQuestion)list_question[i];
+					test_question_user[i].question_insert_word = question;
+				}
 				test_question_user[0].Show();
 			}
 
