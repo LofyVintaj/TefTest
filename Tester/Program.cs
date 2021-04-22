@@ -49,6 +49,21 @@ namespace Tester
 		public ObjectId Id { get; set; }
 		public string name { get; set; }
 		public int count_question { get; set; }
+		//public int figure_to_count {
+		//	get; 
+		//	set => figure_to_count = count_question / 10; 
+		//}
+		public float figure_to_count
+		{
+			get;
+			set;
+		}
+		public void calculate_figure()
+		{
+			figure_to_count = 10F / count_question;
+			Console.WriteLine("figure_to_count");
+			Console.WriteLine(figure_to_count);
+		}
 		//[BsonSerializer(typeof(TestingObjectTypeSerializer))]
 
 		//public List<object> questions = new List<object>();
@@ -60,13 +75,14 @@ namespace Tester
 		public List<QuestionInsertWordQuestion> questions_insert_word = new List<QuestionInsertWordQuestion>();
 
 		//public var questions = new List<object>();
+		
 	}
 
 	public class PassedTest
 	{
 		public Test test { get; set; }
 		public Student student { get; set; }
-		public int assessment { get; set; }
+		public float assessment { get; set; }
 	}
 
 	public class QuestionChoiseAnser

@@ -89,6 +89,7 @@ namespace Tester
 				test_question_user[i].test_object_questions = test_question_user;
 				test_question_user[i].test_count_question = test.count_question;
 				test_question_user[i].passed_test = passed_test;
+				test_question_user[i].calculate_figure = test.figure_to_count;
 				Console.WriteLine(list_question.ToJson());
 				list_question.IndexOf(list_question[i]);
 

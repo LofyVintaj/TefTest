@@ -14,6 +14,7 @@ namespace Tester
 	{
 		//Наш список вопросов
 		public List<TestQuestion> test_object_questions = new List<TestQuestion>();
+		public float calculate_figure; 
 		public int test_count_question;
 		public int page;
 
@@ -65,7 +66,47 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			passed_test.assessment = passed_test.assessment + 2;
+
+			if (bool_question_termin == true)
+			{
+				Console.WriteLine("bool_question_termin  ");
+
+				Console.WriteLine("ITEM CONTROLS -----  ");
+				string text_answer = tableLayoutPanel1.Controls[1].Text;
+				if (text_answer == question_termin.termin_value )
+				{
+					passed_test.assessment = passed_test.assessment + calculate_figure;
+					Console.WriteLine(" YEEEEEEEEES ");
+				}
+				Console.	WriteLine("ITEM CONTROLS -----  ");
+
+			}
+			else if (bool_question_choise_answer == true)
+			{
+				Console.WriteLine("bool_question_choise_answer  ");
+
+				Console.WriteLine("ITEM CONTROLS -----  ");
+				foreach (var i in tableLayoutPanel1.Controls)
+				{
+					Console.WriteLine(i);
+				}
+				Console.WriteLine("ITEM CONTROLS -----  ");
+
+			}
+			else if (bool_question_insert_word == true)
+			{
+				Console.WriteLine("bool_question_insert_word  ");
+
+				Console.WriteLine("ITEM CONTROLS -----  ");
+
+
+
+				//foreach (var i in tableLayoutPanel1.Controls)
+				//{
+				//	Console.WriteLine(i);
+				//}
+				Console.WriteLine("ITEM CONTROLS -----  ");
+			}
 			test_object_questions[page + 1].Show();
 			test_object_questions[page].Hide();
 		}
@@ -105,6 +146,7 @@ namespace Tester
 				rich_box.Width = 1000;
 				rich_box.Height = 250;
 				rich_box.BackColor = Color.FromArgb(69, 69, 97);
+				rich_box.ForeColor = Color.White;
 				rich_box.Text = question_termin.termin_text;
 				tableLayoutPanel1.Controls.Add(rich_box);
 				//Controls.Add(rich_box);
@@ -129,6 +171,7 @@ namespace Tester
 
 				button_box.Location = new Point(50, 50);
 				button_box.Width = 1000;
+				button_box.Height = 800;
 				button_box.BackColor = Color.FromArgb(69, 69, 97);
 				button_box.ForeColor = Color.White;
 
@@ -149,6 +192,7 @@ namespace Tester
 				FlowLayoutPanel button_box = new FlowLayoutPanel();
 				//foreach (var i in question_insert_word.text)
 				button_box.Width = 1000;
+				button_box.Height = 800;
 				int i = 0;
 				string str = question_insert_word.text;
 				string[] split = str.Split(' ', '!', '\'');
@@ -194,6 +238,7 @@ namespace Tester
 		private void button5_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+			passed_test.assessment = passed_test.assessment + calculate_figure;
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			db.InsertRecord("PassedTest", passed_test);

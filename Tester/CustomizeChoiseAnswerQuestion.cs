@@ -30,18 +30,20 @@ namespace Tester
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			object_question.text = richTextBox1.Text;
-			object_question.object_buttons = kk;
+			
 
+			int count = 0;
 			foreach (RadioButton i in flowLayoutPanel1.Controls)
 			{
 				Console.WriteLine(i);
 				if (i.Checked == true)
 				{
-					MessageBox.Show(i.Text);	
+					MessageBox.Show(i.Text);
+					kk[count].or_right = true;
 				}
+				count++;
 			}
-
-
+			object_question.object_buttons = kk;
 			//object_question.termin_value = textBox1.Text;
 			db.UpdateQuestionsChoiseAnswerRecord("Test", test_name, object_question, page);
 			this.Hide();
