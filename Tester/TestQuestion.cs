@@ -23,6 +23,8 @@ namespace Tester
 		public bool bool_question_termin = false;
 		public bool bool_question_choise_answer = false;
 		public bool bool_question_insert_word = false;
+
+		public PassedTest passed_test { get; set; }
 		public TestQuestion()
 		{
 			InitializeComponent();
@@ -36,9 +38,14 @@ namespace Tester
 			{
 				button3.Visible = false;
 			}
-			else if (page == test_count_question - 1)
+			if (page == test_count_question - 1)
 			{
 				button2.Visible = false;
+				button5.Visible = true;
+			}
+			else
+			{
+				button5.Visible = false;
 			}
 
 		}
@@ -58,7 +65,7 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-
+			passed_test.assessment = passed_test.assessment + 2;
 			test_object_questions[page + 1].Show();
 			test_object_questions[page].Hide();
 		}
@@ -182,6 +189,16 @@ namespace Tester
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
 		{
 
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			string connectionString = "TestBook";
+			MongoCRUD db = new MongoCRUD(connectionString);
+			db.InsertRecord("PassedTest", passed_test);
+			Form1 first_form = new Form1();
+			first_form.Show();
 		}
 	}
 }

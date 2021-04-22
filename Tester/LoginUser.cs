@@ -31,12 +31,13 @@ namespace Tester
 			//IMongoDatabase database = client.GetDatabase("tester");
 			MongoCRUD db = new MongoCRUD(connectionString);
 			//db.InsertRecord("User", < Object >);
-			db.InsertRecord("Student", new Student
-			{
+			Student student = new Student{
 				FIO = FIO,
 				Group = Group
-			});
+			};
+			db.InsertRecord("Student", student);
 			UserForm frm = new UserForm();
+			frm.student = student;
 			frm.Show();
 			frm.label2.Text = FIO;
 		}

@@ -37,7 +37,6 @@ namespace Tester
 		public ObjectId Id { get; set; }
 		public string FIO { get; set; }
 		public string Group { get; set; }
-		public int Assessment { get; set; }
 	}
 
 	//[BsonIgnoreExtraElements]
@@ -61,6 +60,13 @@ namespace Tester
 		public List<QuestionInsertWordQuestion> questions_insert_word = new List<QuestionInsertWordQuestion>();
 
 		//public var questions = new List<object>();
+	}
+
+	public class PassedTest
+	{
+		public Test test { get; set; }
+		public Student student { get; set; }
+		public int assessment { get; set; }
 	}
 
 	public class QuestionChoiseAnser

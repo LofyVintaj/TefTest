@@ -102,6 +102,7 @@ namespace Tester
 			this.button2.TabIndex = 17;
 			this.button2.Text = "Выбрать";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// tableLayoutPanel1
 			// 

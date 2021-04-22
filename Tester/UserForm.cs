@@ -18,6 +18,7 @@ namespace Tester
 {
 	public partial class UserForm : Form
 	{
+		public Student student { get; set; }
 		public UserForm()
 		{
 			InitializeComponent();
@@ -44,6 +45,7 @@ namespace Tester
 		//При двойном клике у нас переходит к самому тесту
 		private void LabelMouseDoubleClick(object sender, System.EventArgs e)
 		{
+
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 
@@ -58,7 +60,11 @@ namespace Tester
 			List<TestQuestion> test_question_user = new List<TestQuestion>();
 			Object[] tests_question_user = new Object[test.count_question];
 
-			foreach(var i in question_termin)
+			PassedTest passed_test = new PassedTest();
+			passed_test.test = test;
+			passed_test.student = student;
+
+			foreach (var i in question_termin)
 			{
 				list_question.Add(i);
 			}
@@ -82,6 +88,7 @@ namespace Tester
 				test_question_user[i].Text = Convert.ToString(i);
 				test_question_user[i].test_object_questions = test_question_user;
 				test_question_user[i].test_count_question = test.count_question;
+				test_question_user[i].passed_test = passed_test;
 				Console.WriteLine(list_question.ToJson());
 				list_question.IndexOf(list_question[i]);
 
@@ -154,6 +161,11 @@ namespace Tester
 		}
 
 		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
 		{
 
 		}
