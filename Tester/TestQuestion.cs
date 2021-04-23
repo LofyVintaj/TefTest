@@ -66,6 +66,7 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			string right_answer = " ";
 			//Console.WriteLine("bool_question_termin");
 			//Console.WriteLine(test_object_questions[page].bool_question_termin);
 			//Console.WriteLine("bool_question_choise_answer");
@@ -90,20 +91,46 @@ namespace Tester
 			else if (test_object_questions[page].bool_question_choise_answer == true)
 			{
 				Console.WriteLine("bool_question_choise_answer  ");
-				Console.WriteLine(tableLayoutPanel1.Controls[0]);
+
+
+				foreach (var b in question_choise_answer.object_buttons)
+				{
+					if (b.or_right == true)
+					{
+						Console.WriteLine("Наш правильный ответ");
+						Console.WriteLine(b.name);
+						right_answer = b.name;
+					}
+				}
+
+
 				Console.WriteLine("ITEM CONTROLS -----  ");
 				foreach (var b in tableLayoutPanel1.Controls[0].Controls)
 				{
 					Console.WriteLine(b);
+					RadioButton s = (RadioButton)b;
+					if (s.Checked)
+					{
+						Console.WriteLine("Теперь будем сверять");
+						Console.WriteLine("Вот наш выбор");
+						Console.WriteLine(s.Text);
+						Console.WriteLine("Вот gправильный ответ");
+						Console.WriteLine(right_answer);
+						Console.WriteLine("Вот автопроверка");
+						Console.WriteLine(s.Text == right_answer);
+						if (s.Text == right_answer)
+						{
+							passed_test.assessment = passed_test.assessment + calculate_figure;
+						}
+						else
+						{
+							Console.WriteLine("ХА! НЕПРАВИЛЬНО");
+						}
+					}
 				}
+				
 				Console.WriteLine("ITEM CONTROLS -----  ");
 
-				Console.WriteLine("ITEM CONTROLS -----  ");
-				foreach (var i in tableLayoutPanel1.Controls)
-				{
-					Console.WriteLine(i);
-				}
-				Console.WriteLine("ITEM CONTROLS -----  ");
 
 			}
 			else if (test_object_questions[page].bool_question_insert_word == true)
@@ -251,14 +278,14 @@ namespace Tester
 		private void button5_Click(object sender, EventArgs e)
 		{
 			this.Hide();
-
+			string right_answer = " ";
 			//Console.WriteLine("bool_question_termin");
 			//Console.WriteLine(test_object_questions[page].bool_question_termin);
 			//Console.WriteLine("bool_question_choise_answer");
 			//Console.WriteLine(test_object_questions[page].bool_question_choise_answer);
 			//Console.WriteLine("bool_question_insert_word");
 			//Console.WriteLine(test_object_questions[page].bool_question_insert_word);
-
+		
 			if (test_object_questions[page].bool_question_termin == true)
 			{
 				Console.WriteLine("bool_question_termin  ");
@@ -276,21 +303,46 @@ namespace Tester
 			else if (test_object_questions[page].bool_question_choise_answer == true)
 			{
 				Console.WriteLine("bool_question_choise_answer  ");
-				Console.WriteLine("bool_question_choise_answer  ");
-				Console.WriteLine(tableLayoutPanel1.Controls[0]);
-				Console.WriteLine("ITEM CONTROLS -----  ");
-				foreach ( var b in tableLayoutPanel1.Controls[0].Controls)
+
+
+				foreach (var b in question_choise_answer.object_buttons)
 				{
-					Console.WriteLine(b);
+					if (b.or_right == true)
+					{
+						Console.WriteLine("Наш правильный ответ");
+						Console.WriteLine(b.name);
+						right_answer = b.name;
+					}
 				}
-				Console.WriteLine("ITEM CONTROLS -----  ");
+
 
 				Console.WriteLine("ITEM CONTROLS -----  ");
-				foreach (var i in tableLayoutPanel1.Controls)
+				foreach (var b in tableLayoutPanel1.Controls[0].Controls)
 				{
-					Console.WriteLine(i);
+					Console.WriteLine(b);
+					RadioButton s = (RadioButton)b;
+					if (s.Checked)
+					{
+						Console.WriteLine("Теперь будем сверять");
+						Console.WriteLine("Вот наш выбор");
+						Console.WriteLine(s.Text);
+						Console.WriteLine("Вот gправильный ответ");
+						Console.WriteLine(right_answer);
+						Console.WriteLine("Вот автопроверка");
+						Console.WriteLine(s.Text == right_answer);
+						if (s.Text == right_answer)
+						{
+							passed_test.assessment = passed_test.assessment + calculate_figure;
+						}
+						else
+						{
+							Console.WriteLine("ХА! НЕПРАВИЛЬНО");
+						}
+					}
 				}
+
 				Console.WriteLine("ITEM CONTROLS -----  ");
+
 
 			}
 			else if (test_object_questions[page].bool_question_insert_word == true)
@@ -309,7 +361,7 @@ namespace Tester
 			}
 
 
-			passed_test.assessment = passed_test.assessment + calculate_figure;
+			//passed_test.assessment = passed_test.assessment + calculate_figure;
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			db.InsertRecord("PassedTest", passed_test);
