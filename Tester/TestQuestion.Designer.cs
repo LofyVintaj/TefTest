@@ -123,7 +123,7 @@ namespace Tester
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button5.ForeColor = System.Drawing.Color.Cyan;
-			this.button5.Location = new System.Drawing.Point(832, 467);
+			this.button5.Location = new System.Drawing.Point(832, 487);
 			this.button5.Margin = new System.Windows.Forms.Padding(5);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(125, 41);

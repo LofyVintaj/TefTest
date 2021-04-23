@@ -104,7 +104,7 @@ namespace Tester
 	{
 		public string question_name = "QuestionInsertWordQuestion";
 		public string text { get; set; }
-
+		public List<int> list_index { get; set; }
 	}
 
 

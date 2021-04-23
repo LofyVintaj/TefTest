@@ -235,6 +235,7 @@ namespace Tester
 				button_box.Height = 800;
 				int i = 0;
 				string str = question_insert_word.text;
+				List<int> list_index = question_insert_word.list_index;
 				string[] split = str.Split(' ', '!', '\'');
 				int t = 500;
 				int l = 20;
@@ -246,15 +247,36 @@ namespace Tester
 						Console.WriteLine(s);
 						t = t + 30;
 						var lb = new Label();
+						var txb = new TextBox();
+
+						txb.BackColor = Color.FromArgb(69, 69, 97);
+						txb.ForeColor = Color.White;
+						txb.BorderStyle = BorderStyle.None;
+
+
 						lb.Text = s;
+
+							
+
 						if (t == 710)
 						{
 							l = l + 30;
 						}
+
 						lb.Top = t;
 						lb.Left = l;
 						lb.ForeColor = Color.CornflowerBlue;
-						button_box.Controls.Add(lb);
+						//button_box.Controls.Add(lb);
+
+
+						if (list_index.Contains(i))
+						{
+							button_box.Controls.Add(txb);
+						}
+						else
+						{
+							button_box.Controls.Add(lb);
+						}
 						Console.WriteLine(s);
 						// Controls.Add(lb);
 						++i;
