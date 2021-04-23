@@ -66,24 +66,37 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			//Console.WriteLine("bool_question_termin");
+			//Console.WriteLine(test_object_questions[page].bool_question_termin);
+			//Console.WriteLine("bool_question_choise_answer");
+			//Console.WriteLine(test_object_questions[page].bool_question_choise_answer);
+			//Console.WriteLine("bool_question_insert_word");
+			//Console.WriteLine(test_object_questions[page].bool_question_insert_word);
 
-			if (bool_question_termin == true)
+			if (test_object_questions[page].bool_question_termin == true)
 			{
 				Console.WriteLine("bool_question_termin  ");
 
 				Console.WriteLine("ITEM CONTROLS -----  ");
 				string text_answer = tableLayoutPanel1.Controls[1].Text;
-				if (text_answer == question_termin.termin_value )
+				if (text_answer == question_termin.termin_value)
 				{
 					passed_test.assessment = passed_test.assessment + calculate_figure;
 					Console.WriteLine(" YEEEEEEEEES ");
 				}
-				Console.	WriteLine("ITEM CONTROLS -----  ");
+				Console.WriteLine("ITEM CONTROLS -----  ");
 
 			}
-			else if (bool_question_choise_answer == true)
+			else if (test_object_questions[page].bool_question_choise_answer == true)
 			{
 				Console.WriteLine("bool_question_choise_answer  ");
+				Console.WriteLine(tableLayoutPanel1.Controls[0]);
+				Console.WriteLine("ITEM CONTROLS -----  ");
+				foreach (var b in tableLayoutPanel1.Controls[0].Controls)
+				{
+					Console.WriteLine(b);
+				}
+				Console.WriteLine("ITEM CONTROLS -----  ");
 
 				Console.WriteLine("ITEM CONTROLS -----  ");
 				foreach (var i in tableLayoutPanel1.Controls)
@@ -93,7 +106,7 @@ namespace Tester
 				Console.WriteLine("ITEM CONTROLS -----  ");
 
 			}
-			else if (bool_question_insert_word == true)
+			else if (test_object_questions[page].bool_question_insert_word == true)
 			{
 				Console.WriteLine("bool_question_insert_word  ");
 
@@ -137,7 +150,7 @@ namespace Tester
 			if (bool_question_termin == true)
 			{
 
-				Console.WriteLine("bool_questin_termin 1 ----");
+				//Console.WriteLine("bool_questin_termin 1 ----");
 				Console.WriteLine(question_termin.termin_text);
 				Label rich_box = new Label();
 				TextBox text_box = new TextBox();
@@ -165,7 +178,7 @@ namespace Tester
 			else if (bool_question_choise_answer == true)
 			{
 
-				Console.WriteLine("bool_questin_choise_answer 2 ----");
+				//Console.WriteLine("bool_questin_choise_answer 2 ----");
 				Console.WriteLine(question_choise_answer.text);
 				TableLayoutPanel button_box = new TableLayoutPanel();
 
@@ -187,7 +200,7 @@ namespace Tester
 			}
 			else if (bool_question_insert_word == true)
 			{
-				Console.WriteLine("bool_questin_insert_word 3 ----");
+				//Console.WriteLine("bool_questin_insert_word 3 ----");
 				// Сделать цикл из label закидывать в grawLayout и там где должно быть пустое место, будет textBox 
 				FlowLayoutPanel button_box = new FlowLayoutPanel();
 				//foreach (var i in question_insert_word.text)
@@ -198,7 +211,7 @@ namespace Tester
 				string[] split = str.Split(' ', '!', '\'');
 				int t = 500;
 				int l = 20;
-				Console.WriteLine("-=================================-");
+				//Console.WriteLine("-=================================-");
 				foreach (string s in split)
 				{
 					if (s != "")
@@ -220,7 +233,7 @@ namespace Tester
 						++i;
 					}
 				}
-				Console.WriteLine("-=================================-");
+				//Console.WriteLine("-=================================-");
 
 				tableLayoutPanel1.Controls.Add(button_box);
 				Controls.Add(tableLayoutPanel1);
@@ -238,6 +251,64 @@ namespace Tester
 		private void button5_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+
+			//Console.WriteLine("bool_question_termin");
+			//Console.WriteLine(test_object_questions[page].bool_question_termin);
+			//Console.WriteLine("bool_question_choise_answer");
+			//Console.WriteLine(test_object_questions[page].bool_question_choise_answer);
+			//Console.WriteLine("bool_question_insert_word");
+			//Console.WriteLine(test_object_questions[page].bool_question_insert_word);
+
+			if (test_object_questions[page].bool_question_termin == true)
+			{
+				Console.WriteLine("bool_question_termin  ");
+
+				Console.WriteLine("ITEM CONTROLS -----  ");
+				string text_answer = tableLayoutPanel1.Controls[1].Text;
+				if (text_answer == question_termin.termin_value)
+				{
+					passed_test.assessment = passed_test.assessment + calculate_figure;
+					Console.WriteLine(" YEEEEEEEEES ");
+				}
+				Console.WriteLine("ITEM CONTROLS -----  ");
+
+			}
+			else if (test_object_questions[page].bool_question_choise_answer == true)
+			{
+				Console.WriteLine("bool_question_choise_answer  ");
+				Console.WriteLine("bool_question_choise_answer  ");
+				Console.WriteLine(tableLayoutPanel1.Controls[0]);
+				Console.WriteLine("ITEM CONTROLS -----  ");
+				foreach ( var b in tableLayoutPanel1.Controls[0].Controls)
+				{
+					Console.WriteLine(b);
+				}
+				Console.WriteLine("ITEM CONTROLS -----  ");
+
+				Console.WriteLine("ITEM CONTROLS -----  ");
+				foreach (var i in tableLayoutPanel1.Controls)
+				{
+					Console.WriteLine(i);
+				}
+				Console.WriteLine("ITEM CONTROLS -----  ");
+
+			}
+			else if (test_object_questions[page].bool_question_insert_word == true)
+			{
+				Console.WriteLine("bool_question_insert_word  ");
+
+				Console.WriteLine("ITEM CONTROLS -----  ");
+
+
+
+				//foreach (var i in tableLayoutPanel1.Controls)
+				//{
+				//	Console.WriteLine(i);
+				//}
+				Console.WriteLine("ITEM CONTROLS -----  ");
+			}
+
+
 			passed_test.assessment = passed_test.assessment + calculate_figure;
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);

@@ -94,11 +94,11 @@ namespace Tester
 				list_question.IndexOf(list_question[i]);
 
 
-				Console.WriteLine("====================");
-				Console.WriteLine(list_question[i].GetType());
-				Console.WriteLine(list_question[i].GetType() == typeof(CustiomizeInstertWordQuestion));
-				Console.WriteLine(list_question[i].GetType() == typeof(Tester.QuestionInsertWordQuestion));
-				Console.WriteLine("====================");
+				//Console.WriteLine("====================");
+				//Console.WriteLine(list_question[i].GetType());
+				//Console.WriteLine(list_question[i].GetType() == typeof(CustiomizeInstertWordQuestion));
+				//Console.WriteLine(list_question[i].GetType() == typeof(Tester.QuestionInsertWordQuestion));
+				//Console.WriteLine("====================");
 
 				if (list_question[i].GetType() == typeof(QuestionChoiseAnser))
 				{
