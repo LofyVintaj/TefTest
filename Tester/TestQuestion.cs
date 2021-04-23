@@ -252,6 +252,7 @@ namespace Tester
 						txb.BackColor = Color.FromArgb(69, 69, 97);
 						txb.ForeColor = Color.White;
 						txb.BorderStyle = BorderStyle.None;
+						
 
 
 						lb.Text = s;
@@ -370,15 +371,42 @@ namespace Tester
 			else if (test_object_questions[page].bool_question_insert_word == true)
 			{
 				Console.WriteLine("bool_question_insert_word  ");
-
+				string text = " ";
 				Console.WriteLine("ITEM CONTROLS -----  ");
 
+				foreach ( var i in question_insert_word.list_index)
+				{
+					text = tableLayoutPanel1.Controls[0].Controls[i].Text;
+					Console.WriteLine(text);
 
+					int b = 0;
+					string str = question_insert_word.text;
+					string[] split = str.Split(' ', '!', '\'');
+					foreach (string s in split)
+					{
+						if (s != "")
+						{
+							Console.WriteLine(s);
+							
+							if (b == i)
+							{
+								Console.WriteLine(text == s);
+								Console.WriteLine("YES!!");
+								passed_test.assessment = passed_test.assessment + calculate_figure;
+							}
+							else
+							{
+								Console.WriteLine("NOOOO!!");
+							}
+							
+							++b;
+						}
+					}
 
-				//foreach (var i in tableLayoutPanel1.Controls)
-				//{
-				//	Console.WriteLine(i);
-				//}
+					Console.WriteLine("Всего слов -> {0}", i);
+
+				}
+
 				Console.WriteLine("ITEM CONTROLS -----  ");
 			}
 
