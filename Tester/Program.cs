@@ -80,6 +80,9 @@ namespace Tester
 
 	public class PassedTest
 	{
+		//[BsonId] // id
+		[BsonId]
+		public ObjectId Id { get; set; }
 		public Test test { get; set; }
 		public Student student { get; set; }
 		public float assessment { get; set; }
@@ -138,6 +141,22 @@ namespace Tester
 			foreach (Test doc in documents)
 			{
 				Console.WriteLine(doc.name);
+			}
+			return documents;
+		}
+
+		public List<PassedTest> ListPassedTest<T>(string collectionName)
+		{
+			//var collection = db.GetCollection<Test>(table)
+			//var documents = await collection.Find( new Test() ).ToListAsync();
+			var collection = db.GetCollection<PassedTest>(collectionName);
+			var filter = new List<PassedTest>();
+			//var filter = Builders<Test>.Filter.();
+			var documents = collection.Find(Builders<PassedTest>.Filter.Empty).ToList();
+			Console.WriteLine("----------------");
+			foreach (PassedTest doc in documents)
+			{
+				Console.WriteLine(doc.test.name);
 			}
 			return documents;
 		}

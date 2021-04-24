@@ -38,6 +38,13 @@ namespace Tester
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+            CheckResultTest frm = new CheckResultTest();
+            frm.Show();
+            this.Hide();
+		}
 	}
 
 }
