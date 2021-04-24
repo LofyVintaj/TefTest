@@ -135,9 +135,7 @@ namespace Tester
 							++b;
 						}
 					}
-
 					Console.WriteLine("Всего слов -> {0}", i);
-
 				}
 			}
 
@@ -169,12 +167,9 @@ namespace Tester
 			// Проверяет какой вопрос true такие данные и будет заполнять
 			if (bool_question_termin == true)
 			{
-
-				//Console.WriteLine("bool_questin_termin 1 ----");
 				Console.WriteLine(question_termin.termin_text);
 				Label rich_box = new Label();
 				TextBox text_box = new TextBox();
-
 				rich_box.Location = new Point(50, 450);
 				rich_box.Width = 1000;
 				rich_box.Height = 250;
@@ -182,13 +177,9 @@ namespace Tester
 				rich_box.ForeColor = Color.White;
 				rich_box.Text = question_termin.termin_text;
 				tableLayoutPanel1.Controls.Add(rich_box);
-				//Controls.Add(rich_box);
-
-
 				text_box.Location = new Point(250, 25);
 				text_box.AutoSize = false;
 				text_box.Width = 1000;
-				//rich_box.Padding = Padding.All(15,15,15,15);
 				text_box.BackColor = Color.FromArgb(69, 69, 97);
 				text_box.ForeColor = Color.White;
 				text_box.BorderStyle = BorderStyle.None;
@@ -220,10 +211,8 @@ namespace Tester
 			}
 			else if (bool_question_insert_word == true)
 			{
-				//Console.WriteLine("bool_questin_insert_word 3 ----");
 				// Сделать цикл из label закидывать в grawLayout и там где должно быть пустое место, будет textBox 
 				FlowLayoutPanel button_box = new FlowLayoutPanel();
-				//foreach (var i in question_insert_word.text)
 				button_box.Width = 1000;
 				button_box.Height = 800;
 				int i = 0;
@@ -232,7 +221,6 @@ namespace Tester
 				string[] split = str.Split(' ', '!', '\'');
 				int t = 500;
 				int l = 20;
-				//Console.WriteLine("-=================================-");
 				foreach (string s in split)
 				{
 					if (s != "")
@@ -245,24 +233,17 @@ namespace Tester
 						txb.BackColor = Color.FromArgb(69, 69, 97);
 						txb.ForeColor = Color.White;
 						txb.BorderStyle = BorderStyle.None;
-						
+
 
 
 						lb.Text = s;
-
-							
-
-						if (t == 710)
-						{
-							l = l + 30;
-						}
-
-						lb.Top = t;
-						lb.Left = l;
+						//if (t == 710)
+						//{
+						//	l = l + 30;
+						//}
+						//lb.Top = t;
+						//lb.Left = l;
 						lb.ForeColor = Color.CornflowerBlue;
-						//button_box.Controls.Add(lb);
-
-
 						if (list_index.Contains(i))
 						{
 							button_box.Controls.Add(txb);
@@ -271,8 +252,6 @@ namespace Tester
 						{
 							button_box.Controls.Add(lb);
 						}
-						Console.WriteLine(s);
-						// Controls.Add(lb);
 						++i;
 					}
 				}
@@ -295,13 +274,7 @@ namespace Tester
 		{
 			this.Hide();
 			string right_answer = " ";
-			//Console.WriteLine("bool_question_termin");
-			//Console.WriteLine(test_object_questions[page].bool_question_termin);
-			//Console.WriteLine("bool_question_choise_answer");
-			//Console.WriteLine(test_object_questions[page].bool_question_choise_answer);
-			//Console.WriteLine("bool_question_insert_word");
-			//Console.WriteLine(test_object_questions[page].bool_question_insert_word);
-		
+
 			if (test_object_questions[page].bool_question_termin == true)
 			{
 				string text_answer = tableLayoutPanel1.Controls[1].Text;
@@ -376,9 +349,7 @@ namespace Tester
 				}
 			}
 
-			
-			Console.WriteLine("assesment");
-			Console.WriteLine(passed_test.assessment);
+			MessageBox.Show("Ваша отметка " + passed_test.assessment);
 
 			//passed_test.assessment = passed_test.assessment + calculate_figure;
 			string connectionString = "TestBook";
