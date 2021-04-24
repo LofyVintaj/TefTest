@@ -67,57 +67,30 @@ namespace Tester
 		private void button2_Click(object sender, EventArgs e)
 		{
 			string right_answer = " ";
-			//Console.WriteLine("bool_question_termin");
-			//Console.WriteLine(test_object_questions[page].bool_question_termin);
-			//Console.WriteLine("bool_question_choise_answer");
-			//Console.WriteLine(test_object_questions[page].bool_question_choise_answer);
-			//Console.WriteLine("bool_question_insert_word");
-			//Console.WriteLine(test_object_questions[page].bool_question_insert_word);
-
 			if (test_object_questions[page].bool_question_termin == true)
 			{
-				Console.WriteLine("bool_question_termin  ");
-
-				Console.WriteLine("ITEM CONTROLS -----  ");
 				string text_answer = tableLayoutPanel1.Controls[1].Text;
 				if (text_answer == question_termin.termin_value)
 				{
+					// Поделить на количество возможных ответов правильных и получить с них по тому проценту балла
+					// Допустим если два то вместо 1 получат 0.5 0.5 
 					passed_test.assessment = passed_test.assessment + calculate_figure;
-					Console.WriteLine(" YEEEEEEEEES ");
 				}
-				Console.WriteLine("ITEM CONTROLS -----  ");
-
 			}
 			else if (test_object_questions[page].bool_question_choise_answer == true)
 			{
-				Console.WriteLine("bool_question_choise_answer  ");
-
-
 				foreach (var b in question_choise_answer.object_buttons)
 				{
 					if (b.or_right == true)
 					{
-						Console.WriteLine("Наш правильный ответ");
-						Console.WriteLine(b.name);
 						right_answer = b.name;
 					}
 				}
-
-
-				Console.WriteLine("ITEM CONTROLS -----  ");
 				foreach (var b in tableLayoutPanel1.Controls[0].Controls)
 				{
-					Console.WriteLine(b);
 					RadioButton s = (RadioButton)b;
 					if (s.Checked)
 					{
-						Console.WriteLine("Теперь будем сверять");
-						Console.WriteLine("Вот наш выбор");
-						Console.WriteLine(s.Text);
-						Console.WriteLine("Вот gправильный ответ");
-						Console.WriteLine(right_answer);
-						Console.WriteLine("Вот автопроверка");
-						Console.WriteLine(s.Text == right_answer);
 						if (s.Text == right_answer)
 						{
 							passed_test.assessment = passed_test.assessment + calculate_figure;
@@ -128,25 +101,49 @@ namespace Tester
 						}
 					}
 				}
-				
-				Console.WriteLine("ITEM CONTROLS -----  ");
 
 
 			}
 			else if (test_object_questions[page].bool_question_insert_word == true)
 			{
-				Console.WriteLine("bool_question_insert_word  ");
+				string text = " ";
 
-				Console.WriteLine("ITEM CONTROLS -----  ");
+				foreach (var i in question_insert_word.list_index)
+				{
+					text = tableLayoutPanel1.Controls[0].Controls[i].Text;
+					Console.WriteLine(text);
 
+					int b = 0;
+					string str = question_insert_word.text;
+					string[] split = str.Split(' ', '!', '\'');
+					foreach (string s in split)
+					{
+						if (s != "")
+						{
+							if (b == i)
+							{
+								Console.WriteLine(text == s);
+								Console.WriteLine("YES!!");
+								Console.WriteLine(calculate_figure / (int)question_insert_word.list_index.Count);
+								passed_test.assessment = passed_test.assessment + (calculate_figure / (int)question_insert_word.list_index.Count);
+							}
+							else
+							{
+								Console.WriteLine("NOOOO!!");
+							}
 
+							++b;
+						}
+					}
 
-				//foreach (var i in tableLayoutPanel1.Controls)
-				//{
-				//	Console.WriteLine(i);
-				//}
-				Console.WriteLine("ITEM CONTROLS -----  ");
+					Console.WriteLine("Всего слов -> {0}", i);
+
+				}
 			}
+
+			Console.WriteLine("assesment");
+			Console.WriteLine(passed_test.assessment);
+
 			test_object_questions[page + 1].Show();
 			test_object_questions[page].Hide();
 		}
@@ -156,10 +153,6 @@ namespace Tester
 			
 			test_object_questions[page - 1].Show();
 			test_object_questions[page].Hide();
-			//if (page != test_count_question - 1)
-			//{
-			//	test_object_questions[page].Hide();
-			//}
 		}
 
 		private void label2_Click(object sender, EventArgs e)
@@ -311,48 +304,28 @@ namespace Tester
 		
 			if (test_object_questions[page].bool_question_termin == true)
 			{
-				Console.WriteLine("bool_question_termin  ");
-
-				Console.WriteLine("ITEM CONTROLS -----  ");
 				string text_answer = tableLayoutPanel1.Controls[1].Text;
 				if (text_answer == question_termin.termin_value)
 				{
 					passed_test.assessment = passed_test.assessment + calculate_figure;
 					Console.WriteLine(" YEEEEEEEEES ");
 				}
-				Console.WriteLine("ITEM CONTROLS -----  ");
-
 			}
 			else if (test_object_questions[page].bool_question_choise_answer == true)
 			{
-				Console.WriteLine("bool_question_choise_answer  ");
-
-
 				foreach (var b in question_choise_answer.object_buttons)
 				{
 					if (b.or_right == true)
 					{
-						Console.WriteLine("Наш правильный ответ");
-						Console.WriteLine(b.name);
 						right_answer = b.name;
 					}
 				}
-
-
-				Console.WriteLine("ITEM CONTROLS -----  ");
 				foreach (var b in tableLayoutPanel1.Controls[0].Controls)
 				{
 					Console.WriteLine(b);
 					RadioButton s = (RadioButton)b;
 					if (s.Checked)
 					{
-						Console.WriteLine("Теперь будем сверять");
-						Console.WriteLine("Вот наш выбор");
-						Console.WriteLine(s.Text);
-						Console.WriteLine("Вот gправильный ответ");
-						Console.WriteLine(right_answer);
-						Console.WriteLine("Вот автопроверка");
-						Console.WriteLine(s.Text == right_answer);
 						if (s.Text == right_answer)
 						{
 							passed_test.assessment = passed_test.assessment + calculate_figure;
@@ -363,21 +336,13 @@ namespace Tester
 						}
 					}
 				}
-
-				Console.WriteLine("ITEM CONTROLS -----  ");
-
-
 			}
 			else if (test_object_questions[page].bool_question_insert_word == true)
 			{
-				Console.WriteLine("bool_question_insert_word  ");
 				string text = " ";
-				Console.WriteLine("ITEM CONTROLS -----  ");
-
 				foreach ( var i in question_insert_word.list_index)
 				{
 					text = tableLayoutPanel1.Controls[0].Controls[i].Text;
-					Console.WriteLine(text);
 
 					int b = 0;
 					string str = question_insert_word.text;
@@ -387,29 +352,33 @@ namespace Tester
 						if (s != "")
 						{
 							Console.WriteLine(s);
-							
+							// Если индекс равен второму индексу то + 
 							if (b == i)
 							{
-								Console.WriteLine(text == s);
-								Console.WriteLine("YES!!");
-								passed_test.assessment = passed_test.assessment + calculate_figure;
+								if (tableLayoutPanel1.Controls[0].Controls[b].Text == s)
+								{
+									Console.WriteLine("YES!!");
+									Console.WriteLine(calculate_figure / (int)question_insert_word.list_index.Count);
+									passed_test.assessment = passed_test.assessment + (calculate_figure / (int)question_insert_word.list_index.Count);
+								}
+								else
+								{
+									Console.WriteLine("NOOOO!!");
+								}
 							}
-							else
-							{
-								Console.WriteLine("NOOOO!!");
-							}
+							
 							
 							++b;
 						}
 					}
 
 					Console.WriteLine("Всего слов -> {0}", i);
-
 				}
-
-				Console.WriteLine("ITEM CONTROLS -----  ");
 			}
 
+			
+			Console.WriteLine("assesment");
+			Console.WriteLine(passed_test.assessment);
 
 			//passed_test.assessment = passed_test.assessment + calculate_figure;
 			string connectionString = "TestBook";
