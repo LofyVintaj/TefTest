@@ -60,6 +60,7 @@ namespace Tester
 
         private void Login_Load(object sender, EventArgs e)
 		{
+            textBox2.UseSystemPasswordChar = true;
             this.Cursor = System.Windows.Forms.Cursors.Default;
         }
 
