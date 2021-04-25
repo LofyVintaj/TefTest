@@ -63,6 +63,16 @@ namespace Tester.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1920x1080_Wallpapercartoon_Wallpapers_Driverlayer_Search_ {
+            get {
+                object obj = ResourceManager.GetObject("_1920x1080_Wallpapercartoon_Wallpapers_Driverlayer_Search_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gory_zelen_priroda_202541_1920x1080 {
             get {
                 object obj = ResourceManager.GetObject("gory_zelen_priroda_202541_1920x1080", resourceCulture);

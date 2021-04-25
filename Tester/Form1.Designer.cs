@@ -134,9 +134,8 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.BackgroundImage = global::Tester.Properties.Resources.J4o;
 			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox1.Image = global::Tester.Properties.Resources.J4o;
+			this.pictureBox1.Image = global::Tester.Properties.Resources._1920x1080_Wallpapercartoon_Wallpapers_Driverlayer_Search_;
 			this.pictureBox1.Location = new System.Drawing.Point(0, 44);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(971, 429);

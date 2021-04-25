@@ -127,4 +127,7 @@
   <data name="tumblr_o7vrxl8Uk11runoqyo10_540" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tumblr_o7vrxl8Uk11runoqyo10_540.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_1920x1080_Wallpapercartoon_Wallpapers_Driverlayer_Search_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1920x1080-Wallpapercartoon-Wallpapers-Driverlayer-Search-.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
