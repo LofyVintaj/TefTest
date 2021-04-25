@@ -69,9 +69,9 @@ namespace Tester
 			this.flowLayoutPanel1.AutoScroll = true;
 			this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
 			this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 67);
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 57);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(934, 443);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(934, 467);
 			this.flowLayoutPanel1.TabIndex = 19;
 			this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
 			// 

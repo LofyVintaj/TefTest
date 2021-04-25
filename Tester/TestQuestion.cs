@@ -32,10 +32,6 @@ namespace Tester
 		}
 		public void TestQuestion_Load(object sender, EventArgs e)
 		{
-			tableLayoutPanel1.AutoScroll = true;
-			tableLayoutPanel1.Dock = DockStyle.Fill;
-			tableLayoutPanel1.VerticalScroll.Visible = true;
-
 			page = int.Parse(this.Text);
 			label2.Text = Convert.ToString(page);
 
@@ -196,12 +192,18 @@ namespace Tester
 				//Console.WriteLine("bool_questin_choise_answer 2 ----");
 				Console.WriteLine(question_choise_answer.text);
 				TableLayoutPanel button_box = new TableLayoutPanel();
+				Label lbl = new Label();
+				lbl.Text = question_choise_answer.text;
+				lbl.Width = 1000;
+				lbl.Height = 50;
 
 				button_box.Location = new Point(50, 50);
 				button_box.Width = 1000;
 				button_box.Height = 800;
 				button_box.BackColor = Color.FromArgb(69, 69, 97);
 				button_box.ForeColor = Color.White;
+
+				button_box.Controls.Add(lbl);
 
 				foreach (var i in question_choise_answer.object_buttons)
 				{

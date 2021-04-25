@@ -27,9 +27,9 @@ namespace Tester
             // In this way can create new test question in admin 
             Login frm = new Login();    
             frm.Show();
-            // this.Hide();
+			this.Hide();
 
-        }
+		}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -54,6 +54,7 @@ namespace Tester
 		{
             LoginUser frm = new LoginUser();
             frm.Show();
+            this.Hide();
 		}
 
 		private void panel1_MouseDown(object sender, MouseEventArgs e)
