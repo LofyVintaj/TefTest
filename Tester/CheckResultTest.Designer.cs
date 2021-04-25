@@ -65,9 +65,13 @@ namespace Tester
 			// 
 			// flowLayoutPanel1
 			// 
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 64);
+			this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.flowLayoutPanel1.AutoScroll = true;
+			this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
+			this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 67);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(934, 466);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(934, 443);
 			this.flowLayoutPanel1.TabIndex = 19;
 			this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
 			// 
@@ -82,7 +86,7 @@ namespace Tester
 			this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
 			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "CheckResultTest";
 			this.Text = "CheckResultTest";
 			this.Load += new System.EventHandler(this.CheckResultTest_Load);

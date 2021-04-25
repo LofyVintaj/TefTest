@@ -32,6 +32,10 @@ namespace Tester
 		}
 		public void TestQuestion_Load(object sender, EventArgs e)
 		{
+			tableLayoutPanel1.AutoScroll = true;
+			tableLayoutPanel1.Dock = DockStyle.Fill;
+			tableLayoutPanel1.VerticalScroll.Visible = true;
+
 			page = int.Parse(this.Text);
 			label2.Text = Convert.ToString(page);
 
