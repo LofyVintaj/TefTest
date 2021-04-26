@@ -279,7 +279,7 @@ namespace Tester
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			
 			string right_answer = " ";
 
 			if (test_object_questions[page].bool_question_termin == true)
@@ -358,12 +358,15 @@ namespace Tester
 
 			MessageBox.Show("Ваша отметка " + passed_test.assessment);
 
+
 			//passed_test.assessment = passed_test.assessment + calculate_figure;
 			string connectionString = "TestBook";
 			MongoCRUD db = new MongoCRUD(connectionString);
 			db.InsertRecord("PassedTest", passed_test);
+
 			Form1 first_form = new Form1();
 			first_form.Show();
+			this.Hide();
 		}
 	}
 }

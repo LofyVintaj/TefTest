@@ -130,8 +130,8 @@ namespace Tester
 				test_question_user[0].Show();
 			}
 
-			
 
+			this.Hide();
 			Console.WriteLine(test.ToJson());
 		}
 
