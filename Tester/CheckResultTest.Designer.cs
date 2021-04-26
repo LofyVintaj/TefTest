@@ -32,6 +32,7 @@ namespace Tester
 			this.button6 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -69,11 +70,19 @@ namespace Tester
 			this.flowLayoutPanel1.AutoScroll = true;
 			this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
 			this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 57);
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 62);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(934, 467);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(934, 462);
 			this.flowLayoutPanel1.TabIndex = 19;
 			this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(12, 62);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(0, 23);
+			this.label1.TabIndex = 20;
 			// 
 			// CheckResultTest
 			// 
@@ -81,6 +90,7 @@ namespace Tester
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(971, 542);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.flowLayoutPanel1);
 			this.Controls.Add(this.panel2);
 			this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
@@ -92,6 +102,7 @@ namespace Tester
 			this.Load += new System.EventHandler(this.CheckResultTest_Load);
 			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -100,5 +111,6 @@ namespace Tester
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+		private System.Windows.Forms.Label label1;
 	}
 }

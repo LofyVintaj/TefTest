@@ -193,9 +193,10 @@ namespace Tester
 				Console.WriteLine(question_choise_answer.text);
 				TableLayoutPanel button_box = new TableLayoutPanel();
 				Label lbl = new Label();
-				lbl.Text = question_choise_answer.text;
-				lbl.Width = 1000;
-				lbl.Height = 50;
+				label1.Text = question_choise_answer.text;
+				Console.WriteLine("ДОЛЖЕН БЫТЬ ТЕКСТ");
+				label1.Width = 1000;
+				label1.Height = 50;
 
 				button_box.Location = new Point(50, 50);
 				button_box.Width = 1000;
@@ -203,7 +204,7 @@ namespace Tester
 				button_box.BackColor = Color.FromArgb(69, 69, 97);
 				button_box.ForeColor = Color.White;
 
-				button_box.Controls.Add(lbl);
+				//button_box.Controls.Add(lbl);
 
 				foreach (var i in question_choise_answer.object_buttons)
 				{

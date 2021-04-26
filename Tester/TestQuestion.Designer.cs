@@ -36,6 +36,7 @@ namespace Tester
 			this.label2 = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.button5 = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -111,7 +112,7 @@ namespace Tester
 			this.tableLayoutPanel1.AutoScroll = true;
 			this.tableLayoutPanel1.ColumnCount = 1;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 74);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 100);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 1;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -133,12 +134,22 @@ namespace Tester
 			this.button5.UseVisualStyleBackColor = true;
 			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
+			this.label1.Location = new System.Drawing.Point(12, 63);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(0, 23);
+			this.label1.TabIndex = 13;
+			// 
 			// TestQuestion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(971, 542);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.label2);
@@ -168,5 +179,6 @@ namespace Tester
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Label label1;
 	}
 }

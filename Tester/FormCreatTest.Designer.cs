@@ -31,8 +31,6 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
-			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.button3 = new System.Windows.Forms.Button();
@@ -77,32 +75,6 @@
 			this.label1.Size = new System.Drawing.Size(146, 23);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "Кол-во вопросов";
-			// 
-			// button2
-			// 
-			this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.button2.Location = new System.Drawing.Point(221, 290);
-			this.button2.Margin = new System.Windows.Forms.Padding(5);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(125, 42);
-			this.button2.TabIndex = 3;
-			this.button2.Text = "Поставить";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-			this.label2.Location = new System.Drawing.Point(50, 300);
-			this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(72, 23);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Таймер";
 			// 
 			// label3
 			// 
@@ -165,8 +137,6 @@
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.textBox2);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
@@ -187,8 +157,6 @@
         private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Button button3;
