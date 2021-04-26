@@ -20,6 +20,13 @@ namespace Tester
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (textBox3.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Вы не ввели значения");
+                return;
+            }
+
             this.Cursor = System.Windows.Forms.Cursors.Default;
             string path = "admin.txt";
             StreamReader fileI = new StreamReader(path);

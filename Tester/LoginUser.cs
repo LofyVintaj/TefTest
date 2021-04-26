@@ -24,6 +24,12 @@ namespace Tester
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			if ( textBox3.Text == "" || textBox2.Text == "" )
+			{
+				MessageBox.Show("Вы не ввели значения");
+				return;
+			}
+
 			string connectionString = "TestBook";
 			string FIO = textBox3.Text;
 			string Group = textBox2.Text;

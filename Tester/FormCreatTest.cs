@@ -21,7 +21,10 @@ namespace Tester
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-            int count_question;
+            
+
+
+            int count_question = 0;
             string test_name;
             Test test = new Test();
             if (textBox1.Text == "0")
@@ -34,8 +37,21 @@ namespace Tester
                        MessageBoxDefaultButton.Button1,
                        MessageBoxOptions.DefaultDesktopOnly);
                 this.Show();
-            } 
-            count_question = Int32.Parse(textBox1.Text);
+            }
+
+            try
+            {
+
+                count_question = Int32.Parse(textBox1.Text);
+            }
+
+            catch
+            {
+                MessageBox.Show(" Некорректный ввод ");
+                return;
+            }
+
+
             test_name = textBox2.Text;
             
 
@@ -71,7 +87,17 @@ namespace Tester
             // здесь не было добавлено значение и при расшерении класса он просто добавляет OBject вместо Array
             db.InsertRecord("Test", teste);
 
-			object_questions[count_question - 1].test_name = test_name;
+			try
+			{
+                object_questions[count_question - 1].test_name = test_name;
+            }
+
+            catch
+			{
+                MessageBox.Show(" Некорректный ввод ");
+                return;
+			}
+			
 
             this.Hide();
 
@@ -94,5 +120,10 @@ namespace Tester
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
