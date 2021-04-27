@@ -244,6 +244,7 @@ namespace Tester
 
 
 						lb.Text = s;
+						lb.AutoSize = true;
 						//if (t == 710)
 						//{
 						//	l = l + 30;

@@ -150,6 +150,7 @@ namespace Tester
 					{
 						l = l + 30;
 					}
+					lb.AutoSize = true;
 					lb.Top = t;
 					lb.Left = l;
 					lb.ForeColor = Color.CornflowerBlue;
