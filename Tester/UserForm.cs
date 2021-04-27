@@ -148,11 +148,11 @@ namespace Tester
 				label_element.Text = s.name;
 				label_element.ForeColor = Color.White;
 				label_element.Font = new Font(label1.Font.Name, Convert.ToSingle(20), label1.Font.Style);
-				label_element.Width = 800;
+				label_element.Width = 450;
 				label_element.Height = 50;
 				label_element.MouseClick += voidLabelMouseClick;
 				label_element.MouseDoubleClick += LabelMouseDoubleClick;
-				tableLayoutPanel1.Controls.Add(label_element);
+				flowLayoutPanel1.Controls.Add(label_element);
 			}
 		}
 

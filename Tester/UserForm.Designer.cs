@@ -34,7 +34,7 @@ namespace Tester
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -104,19 +104,15 @@ namespace Tester
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// tableLayoutPanel1
+			// flowLayoutPanel1
 			// 
-			this.tableLayoutPanel1.AutoScroll = true;
-			this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
-			this.tableLayoutPanel1.ColumnCount = 1;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(48, 126);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 1;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 407);
-			this.tableLayoutPanel1.TabIndex = 18;
-			this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+			this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.flowLayoutPanel1.AutoScroll = true;
+			this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(48, 126);
+			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(582, 407);
+			this.flowLayoutPanel1.TabIndex = 19;
 			// 
 			// UserForm
 			// 
@@ -124,7 +120,7 @@ namespace Tester
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
 			this.ClientSize = new System.Drawing.Size(1286, 583);
-			this.Controls.Add(this.tableLayoutPanel1);
+			this.Controls.Add(this.flowLayoutPanel1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -149,6 +145,6 @@ namespace Tester
 		private System.Windows.Forms.Label label1;
 		public System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 	}
 }
