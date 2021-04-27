@@ -35,6 +35,7 @@
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.button3 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.button4 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -106,6 +107,7 @@
 			// 
 			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
 			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button3.FlatAppearance.BorderSize = 0;
 			this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -121,6 +123,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+			this.panel1.Controls.Add(this.button4);
 			this.panel1.Controls.Add(this.button3);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -128,6 +131,20 @@
 			this.panel1.Size = new System.Drawing.Size(971, 44);
 			this.panel1.TabIndex = 7;
 			this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+			// 
+			// button4
+			// 
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button4.ForeColor = System.Drawing.Color.DarkCyan;
+			this.button4.Location = new System.Drawing.Point(822, 3);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(70, 38);
+			this.button4.TabIndex = 8;
+			this.button4.Text = "-";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// FormCreatTest
 			// 
@@ -162,5 +179,6 @@
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button button4;
 	}
 }

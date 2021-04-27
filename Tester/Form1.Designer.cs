@@ -36,6 +36,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.button4 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,10 +95,11 @@
 			// 
 			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
 			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button3.FlatAppearance.BorderSize = 0;
 			this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
 			this.button3.ForeColor = System.Drawing.Color.Crimson;
 			this.button3.Location = new System.Drawing.Point(898, 3);
 			this.button3.Name = "button3";
@@ -110,6 +112,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+			this.panel1.Controls.Add(this.button4);
 			this.panel1.Controls.Add(this.button3);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -141,6 +144,20 @@
 			this.pictureBox1.Size = new System.Drawing.Size(971, 429);
 			this.pictureBox1.TabIndex = 6;
 			this.pictureBox1.TabStop = false;
+			// 
+			// button4
+			// 
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button4.ForeColor = System.Drawing.Color.DarkCyan;
+			this.button4.Location = new System.Drawing.Point(822, 3);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(70, 38);
+			this.button4.TabIndex = 7;
+			this.button4.Text = "-";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// Form1
 			// 
@@ -177,6 +194,7 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Button button4;
 	}
 }
 

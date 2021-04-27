@@ -70,5 +70,10 @@ namespace Tester
 				flowLayoutPanel1.Controls.Add(label_element);
 			}
 		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
+		}
 	}
 }

@@ -41,6 +41,7 @@ namespace Tester
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.button6 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
+			this.button7 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
@@ -171,6 +172,7 @@ namespace Tester
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+			this.panel2.Controls.Add(this.button7);
 			this.panel2.Controls.Add(this.button6);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -184,6 +186,7 @@ namespace Tester
 			// 
 			this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
 			this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button6.FlatAppearance.BorderSize = 0;
 			this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,6 +215,20 @@ namespace Tester
 			this.button4.TabIndex = 9;
 			this.button4.Text = "X";
 			this.button4.UseVisualStyleBackColor = false;
+			// 
+			// button7
+			// 
+			this.button7.FlatAppearance.BorderSize = 0;
+			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button7.ForeColor = System.Drawing.Color.DarkCyan;
+			this.button7.Location = new System.Drawing.Point(819, 2);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(70, 38);
+			this.button7.TabIndex = 24;
+			this.button7.Text = "-";
+			this.button7.UseVisualStyleBackColor = true;
+			this.button7.Click += new System.EventHandler(this.button7_Click);
 			// 
 			// CustomizeQuestion
 			// 
@@ -256,5 +273,6 @@ namespace Tester
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button button7;
 	}
 }

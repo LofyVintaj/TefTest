@@ -40,6 +40,7 @@ namespace Tester
 			this.label4 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			this.button4 = new System.Windows.Forms.Button();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -73,6 +74,7 @@ namespace Tester
 			// 
 			this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
 			this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button6.FlatAppearance.BorderSize = 0;
 			this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -89,6 +91,7 @@ namespace Tester
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(53)))));
+			this.panel2.Controls.Add(this.button4);
 			this.panel2.Controls.Add(this.button6);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -172,6 +175,20 @@ namespace Tester
 			this.flowLayoutPanel1.TabIndex = 22;
 			this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
 			// 
+			// button4
+			// 
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button4.ForeColor = System.Drawing.Color.DarkCyan;
+			this.button4.Location = new System.Drawing.Point(803, 3);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(70, 38);
+			this.button4.TabIndex = 23;
+			this.button4.Text = "-";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
+			// 
 			// CustomizeChoiseAnswerQuestion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -214,5 +231,6 @@ namespace Tester
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+		private System.Windows.Forms.Button button4;
 	}
 }

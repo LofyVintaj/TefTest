@@ -118,5 +118,10 @@ namespace Tester
 		{
 			this.Hide();
 		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
+		}
 	}
 }
